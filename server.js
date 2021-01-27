@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const drinks = require('./src/backend/Drink/drinkRoutes');
+const customers = require('./src/backend/Customer/customerRoutes');
 
 mongoose
   .connect(`mongodb://localhost/${process.env.DB_NAME}`, {
@@ -28,6 +29,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/drinks', drinks);
+app.use('/customers', customers);
 
 const port = process.env.DB_PORT || 4000;
 
