@@ -5,7 +5,7 @@ const app = express();
 
 const bodyParser = require('body-parser');
 
-const drinks = require('./src/backend/Drink/DrinkRoutes');
+const drinks = require('./src/backend/Drink/drinkRoutes');
 
 mongoose
   .connect(`mongodb://localhost/${process.env.DB_NAME}`, {

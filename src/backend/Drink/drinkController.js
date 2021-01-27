@@ -1,4 +1,4 @@
-const { Drink } = require('./DrinkModel');
+const { Drink } = require('./drinkModel');
 
 exports.getAllDrinks = (req, res) => {
   Drink.find({})
