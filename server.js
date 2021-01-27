@@ -5,6 +5,8 @@ const app = express();
 
 const bodyParser = require('body-parser');
 
+const drinks = require('./src/backend/Drink/DrinkRoutes');
+
 mongoose
   .connect(`mongodb://localhost/${process.env.DB_NAME}`, {
     useNewUrlParser: true,
@@ -24,6 +26,8 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
+
+app.use('/drinks', drinks);
 
 const port = process.env.DB_PORT || 4000;
 
