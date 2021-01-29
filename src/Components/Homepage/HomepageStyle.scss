@@ -53,15 +53,25 @@
     justify-content: center;
     padding-left: 15%;
     padding-right: 15%;
+    animation: fade 2s ease;
 
-    .link {
-      // border: 1px solid #e71d36;
-      // background-color: #ff9f1c;
-      // color: #011627;
+    .linkContainer {
       font-size: 2rem;
       margin-top: 10%;
       padding-left: 10%;
       padding-right: 10%;
+
+      .icons {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+      }
+
+      .link {
+        text-decoration: none;
+        color: #ff9f1c;
+        font-weight: bold;
+      }
     }
   }
 }
