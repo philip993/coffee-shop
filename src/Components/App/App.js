@@ -1,6 +1,7 @@
 import React from 'react';
 import Homepage from '../Homepage/Homepage';
 import { Switch, Route } from 'react-router-dom';
+import './AppStyle.scss';
 
 const App = () => {
   return (
