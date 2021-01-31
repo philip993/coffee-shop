@@ -44,11 +44,10 @@
   }
 
   .homepageSecondDiv {
-    height: 60vh;
+    height: 70vh;
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: auto auto auto;
     align-content: stretch;
     justify-content: center;
     padding-left: 15%;
@@ -60,12 +59,132 @@
       margin-top: 10%;
       padding-left: 10%;
       padding-right: 10%;
+      margin: auto;
+      text-align: center;
 
       .icons {
-        width: 200px;
-        height: 200px;
-        margin: auto;
+        width: 180px;
+        height: 180px;
+        border: #ff9f1c;
+        color: #ff9f1c;
+        opacity: 0.7;
+        // margin: auto;
+        margin: 20%;
       }
+
+      .link {
+        text-decoration: none;
+        color: #ff9f1c;
+        font-weight: bold;
+        width: 100%;
+
+        &:hover {
+        }
+      }
+    }
+  }
+
+  .homepageThirdDiv {
+    padding-left: 15%;
+    padding-right: 15%;
+    animation: fade 2s ease;
+    height: 40vh;
+    background-color: #011627;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .one {
+      width: 25%;
+      color: #fdfffc;
+      display: flex;
+      flex-direction: column;
+      padding-top: 5%;
+
+      .link {
+        text-decoration: none;
+        color: #fdfffc;
+        margin-left: 10%;
+        margin-top: 10%;
+      }
+    }
+
+    .two {
+      width: 25%;
+      color: #fdfffc;
+      display: flex;
+      flex-direction: column;
+      padding-top: 5%;
+
+      .link {
+        text-decoration: none;
+        color: #fdfffc;
+        margin-left: 10%;
+        margin-top: 10%;
+      }
+    }
+
+    .three {
+      width: 25%;
+      color: #fdfffc;
+      display: flex;
+      flex-direction: column;
+      padding-top: 5%;
+      .link {
+        text-decoration: none;
+        color: #fdfffc;
+        margin-left: 10%;
+        margin-top: 10%;
+      }
+    }
+  }
+
+  .homepageFourthDiv {
+    background-color: #011627;
+    color: #fdfffc;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    justify-content: space-around;
+
+    .iconsContainer {
+      width: 40%;
+      .brand {
+        float: right;
+        margin: 2%;
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    .messageContainer {
+      width: 40%;
+      margin-top: 2%;
+    }
+  }
+
+  .homepageFifthDiv {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    .contactImage {
+      width: 60%;
+      height: 80%;
+    }
+
+    span {
+      width: 40%;
+      height: 20%;
+      margin: auto;
+      text-align: center;
+      font-size: 2rem;
+      text-align: center;
 
       .link {
         text-decoration: none;
