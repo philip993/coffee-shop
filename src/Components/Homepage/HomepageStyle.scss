@@ -233,6 +233,11 @@
         color: #ff9f1c;
         font-weight: bold;
         font-size: 1.2rem;
+
+        &:hover {
+          color: #e71d36;
+          transition: 300ms ease-in;
+        }
       }
     }
   }

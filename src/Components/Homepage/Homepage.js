@@ -61,6 +61,9 @@ const Homepage = () => {
             For our Customers, we choose only the finest selection of Coffee
             Beans.
           </p>
+          <Link className="link">
+            View selection <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
         </span>
         <img className="beansImage" src={CoffeeBeans} alt="beans" />
       </div>
