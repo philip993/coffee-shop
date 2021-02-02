@@ -39,6 +39,12 @@
         border: 1px solid #ff9f1c;
         margin: 1%;
         color: #fdfffc;
+        font-weight: bold;
+
+        &:hover {
+          transition: 300ms ease-in;
+          background-color: #ff9f1c;
+        }
       }
     }
   }
@@ -85,6 +91,8 @@
         font-size: 1.2rem;
 
         &:hover {
+          color: #e71d36;
+          transition: 300ms ease-in;
         }
       }
     }
@@ -114,6 +122,11 @@
         text-decoration: none;
         color: #fdfffc;
         margin: 3%;
+
+        &:hover {
+          transition: 300ms ease-in;
+          color: #e71d36;
+        }
       }
     }
   }
@@ -136,6 +149,12 @@
         margin: 2%;
         width: 25px;
         height: 25px;
+
+        &:hover {
+          cursor: pointer;
+          transition: 500ms ease-in;
+          color: #2ec4b6;
+        }
       }
     }
 
@@ -175,6 +194,11 @@
         color: #ff9f1c;
         font-weight: bold;
         font-size: 1.2rem;
+
+        &:hover {
+          color: #e71d36;
+          transition: 300ms ease-in;
+        }
       }
     }
   }
