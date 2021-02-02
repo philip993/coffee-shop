@@ -2,11 +2,11 @@ import React from 'react';
 import './HomepageStyle.scss';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import MenuIcon from '../../img/menu.svg';
-import OrderIcon from '../../img/order.svg';
-import ProfileIcon from '../../img/profile.svg';
-import ContactIcon from '../../img/contact.svg';
-import ContactUs from '../../img/c2.jpg';
+import MenuIcon from '../../img/coffee2.png';
+import OrderIcon from '../../img/order.png';
+import ProfileIcon from '../../img/user.png';
+import ContactUs from '../../img/c2.png';
+import CoffeeBeans from '../../img/beans3.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebook,
@@ -14,7 +14,10 @@ import {
   faInstagram,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCoffee,
+  faLongArrowAltRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Homepage = () => {
   return (
@@ -31,22 +34,46 @@ const Homepage = () => {
       <div className="homepageSecondDiv">
         <div className="linkContainer">
           <img className="icons" src={MenuIcon} alt="menu" />
-          <Link className="link">Check Menu</Link>
+          <p>Choose your Coffee from our Menu. </p>
+          <Link className="link">
+            Check Menu <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
         </div>
         <div className="linkContainer">
           <img className="icons" src={OrderIcon} alt="order" />
-          <Link className="link">Show Orders</Link>
+          <p>View your current and previous Orders.</p>
+          <Link className="link">
+            Show Orders <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
         </div>
         <div className="linkContainer">
           <img className="icons" src={ProfileIcon} alt="profile" />
-          <Link className="link">View Profile</Link>
+          <p>Your personal Profile page.</p>
+          <Link className="link">
+            View Profile <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
         </div>
         <div className="linkContainer"></div>
+      </div>
+      <div className="homepageSixthDiv">
+        <span>
+          <p>
+            For our Customers, we choose only the finest selection of Coffee
+            Beans.
+          </p>
+        </span>
+        <img className="beansImage" src={CoffeeBeans} alt="beans" />
       </div>
       <div className="homepageFifthDiv">
         <img className="contactImage" src={ContactUs} alt="contact us" />
         <span>
-          <Link className="link">Contact Us</Link>
+          <p>
+            Having some more question about Us? Feel free to contact us on link
+            bellow.
+          </p>
+          <Link className="link">
+            Contact Us <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
         </span>
       </div>
       <div className="homepageThirdDiv">
@@ -64,6 +91,10 @@ const Homepage = () => {
           <Link className="link">Career</Link>
           <Link className="link">Clients</Link>
           <Link className="link">FAQ</Link>
+        </div>
+        <div className="four">
+          <Link className="link">Location</Link>
+          <Link className="link">Delivery</Link>
         </div>
       </div>
       <div className="homepageFourthDiv">

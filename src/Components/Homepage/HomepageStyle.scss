@@ -11,7 +11,7 @@
 
     h1 {
       margin-top: 0;
-      padding-top: 5%;
+      padding-top: 8%;
       text-align: center;
       color: #fdfffc;
       font-size: 5rem;
@@ -44,7 +44,7 @@
   }
 
   .homepageSecondDiv {
-    height: 70vh;
+    height: 60vh;
     display: grid;
     grid-gap: 40px;
     grid-template-columns: auto auto auto;
@@ -53,9 +53,10 @@
     padding-left: 15%;
     padding-right: 15%;
     animation: fade 2s ease;
+    margin-left: 5%;
+    margin-right: 5%;
 
     .linkContainer {
-      font-size: 2rem;
       margin-top: 10%;
       padding-left: 10%;
       padding-right: 10%;
@@ -63,13 +64,17 @@
       text-align: center;
 
       .icons {
-        width: 180px;
+        width: 200px;
         height: 180px;
         border: #ff9f1c;
         color: #ff9f1c;
-        opacity: 0.7;
-        // margin: auto;
-        margin: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 1.5rem;
       }
 
       .link {
@@ -77,6 +82,7 @@
         color: #ff9f1c;
         font-weight: bold;
         width: 100%;
+        font-size: 1.2rem;
 
         &:hover {
         }
@@ -88,14 +94,17 @@
     padding-left: 15%;
     padding-right: 15%;
     animation: fade 2s ease;
-    height: 40vh;
+    height: 30vh;
     background-color: #011627;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
-    .one {
-      width: 25%;
+    .one,
+    .two,
+    .three,
+    .four {
+      width: 22%;
       color: #fdfffc;
       display: flex;
       flex-direction: column;
@@ -104,37 +113,7 @@
       .link {
         text-decoration: none;
         color: #fdfffc;
-        margin-left: 10%;
-        margin-top: 10%;
-      }
-    }
-
-    .two {
-      width: 25%;
-      color: #fdfffc;
-      display: flex;
-      flex-direction: column;
-      padding-top: 5%;
-
-      .link {
-        text-decoration: none;
-        color: #fdfffc;
-        margin-left: 10%;
-        margin-top: 10%;
-      }
-    }
-
-    .three {
-      width: 25%;
-      color: #fdfffc;
-      display: flex;
-      flex-direction: column;
-      padding-top: 5%;
-      .link {
-        text-decoration: none;
-        color: #fdfffc;
-        margin-left: 10%;
-        margin-top: 10%;
+        margin: 3%;
       }
     }
   }
@@ -148,6 +127,7 @@
     flex-direction: row;
     height: 10vh;
     justify-content: space-around;
+    animation: fade 2s ease;
 
     .iconsContainer {
       width: 40%;
@@ -172,24 +152,63 @@
     align-content: center;
     padding-left: 15%;
     padding-right: 15%;
+    animation: fade 2s ease;
 
     .contactImage {
-      width: 60%;
-      height: 80%;
+      margin-left: 5%;
     }
 
     span {
       width: 40%;
-      height: 20%;
+      height: 40%;
       margin: auto;
       text-align: center;
-      font-size: 2rem;
+      font-weight: bold;
       text-align: center;
+
+      p {
+        font-size: 1.5rem;
+      }
 
       .link {
         text-decoration: none;
         color: #ff9f1c;
         font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .homepageSixthDiv {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    animation: fade 2s ease;
+
+    .beansImage {
+      margin-right: 5%;
+    }
+
+    span {
+      width: 40%;
+      height: 40%;
+      margin: auto;
+      text-align: center;
+      font-weight: bold;
+      text-align: center;
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .link {
+        text-decoration: none;
+        color: #ff9f1c;
+        font-weight: bold;
+        font-size: 1.2rem;
       }
     }
   }
