@@ -1,0 +1,40 @@
+.menuDiv {
+  padding-left: 15%;
+  padding-right: 15%;
+  min-height: 100vh;
+
+  .menuFirstDiv {
+    width: 100%;
+  }
+
+  .menuSecondDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin: auto;
+    .card {
+      //   width: 300px;
+      //   height: 300px;
+      border: 1px solid #011627;
+
+      .cardHeader {
+        background-color: #ff9f1c;
+        margin: 0;
+        padding: 2%;
+      }
+
+      .cardMedia {
+        width: 200px;
+        height: 200px;
+      }
+
+      .cardContent {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cardFooter {
+      }
+    }
+  }
+}
