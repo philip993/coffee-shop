@@ -5,6 +5,8 @@
   .homepageFirstDiv {
     background-image: url('../../img/bg.jpg');
     background-repeat: no-repeat;
+    display: block;
+    background-size: cover;
     width: 100%;
     height: 60vh;
     animation: fade 2s ease;
@@ -52,15 +54,13 @@
   .homepageSecondDiv {
     height: 60vh;
     display: grid;
-    grid-gap: 40px;
+    grid-gap: auto;
     grid-template-columns: auto auto auto;
     align-content: stretch;
     justify-content: center;
     padding-left: 15%;
     padding-right: 15%;
     animation: fade 2s ease;
-    margin-left: 5%;
-    margin-right: 5%;
 
     .linkContainer {
       margin-top: 10%;
