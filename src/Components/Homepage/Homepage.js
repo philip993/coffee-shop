@@ -1,0 +1,119 @@
+import React from 'react';
+import './HomepageStyle.scss';
+import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import MenuIcon from '../../img/coffee2.png';
+import OrderIcon from '../../img/order.png';
+import ProfileIcon from '../../img/user.png';
+import ContactUs from '../../img/c2.png';
+import CoffeeBeans from '../../img/beans3.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faFacebook,
+  faFacebookMessenger,
+  faInstagram,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faCoffee,
+  faLongArrowAltRight,
+} from '@fortawesome/free-solid-svg-icons';
+
+const Homepage = () => {
+  return (
+    <div className="homepage">
+      <div className="homepageFirstDiv">
+        <div className="homepageButtonContainer">
+          <Button className="signInButton">Sign In</Button>
+          <Button className="signUpButton">Sign Up</Button>
+        </div>
+
+        <h1>Coffee Shop</h1>
+        <h2>Don't wait in line, make your order now!</h2>
+      </div>
+      <div className="homepageSecondDiv">
+        <div className="linkContainer">
+          <img className="icons" src={MenuIcon} alt="menu" />
+          <p>Choose your Coffee from our Menu. </p>
+          <Link className="link">
+            Check Menu <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
+        </div>
+        <div className="linkContainer">
+          <img className="icons" src={OrderIcon} alt="order" />
+          <p>View your current and previous Orders.</p>
+          <Link className="link">
+            Show Orders <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
+        </div>
+        <div className="linkContainer">
+          <img className="icons" src={ProfileIcon} alt="profile" />
+          <p>Your personal information at one place.</p>
+          <Link className="link">
+            View Profile <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
+        </div>
+        <div className="linkContainer"></div>
+      </div>
+      <div className="homepageSixthDiv">
+        <span>
+          <p>
+            For our Customers, we choose only the finest selection of Coffee
+            Beans.
+          </p>
+          <Link className="link">
+            View selection <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
+        </span>
+        <img className="beansImage" src={CoffeeBeans} alt="beans" />
+      </div>
+      <div className="homepageFifthDiv">
+        <img className="contactImage" src={ContactUs} alt="contact us" />
+        <span>
+          <p>
+            Having some more question about Us? Feel free to contact us on link
+            bellow.
+          </p>
+          <Link className="link">
+            Contact Us <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </Link>
+        </span>
+      </div>
+      <div className="homepageThirdDiv">
+        <div className="one">
+          <Link className="link">
+            Coffe-Shop <FontAwesomeIcon icon={faCoffee} />
+          </Link>
+        </div>
+        <div className="two">
+          <Link className="link">Company</Link>
+          <Link className="link">Vision</Link>
+          <Link className="link">Mision</Link>
+        </div>
+        <div className="three">
+          <Link className="link">Career</Link>
+          <Link className="link">Clients</Link>
+          <Link className="link">FAQ</Link>
+        </div>
+        <div className="four">
+          <Link className="link">Location</Link>
+          <Link className="link">Delivery</Link>
+        </div>
+      </div>
+      <div className="homepageFourthDiv">
+        <span className="messageContainer">
+          <FontAwesomeIcon icon={faCoffee} /> All rights reserved, 2021
+        </span>
+
+        <span className="iconsContainer">
+          <FontAwesomeIcon className="brand" icon={faFacebook} />
+          <FontAwesomeIcon className="brand" icon={faInstagram} />
+          <FontAwesomeIcon className="brand" icon={faFacebookMessenger} />
+          <FontAwesomeIcon className="brand" icon={faTwitter} />
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export default Homepage;
