@@ -35,7 +35,7 @@ const Homepage = () => {
         <div className="linkContainer">
           <img className="icons" src={MenuIcon} alt="menu" />
           <p>Choose your Coffee from our Menu. </p>
-          <Link className="link">
+          <Link to="/menu" className="link">
             Check Menu <FontAwesomeIcon icon={faLongArrowAltRight} />
           </Link>
         </div>
