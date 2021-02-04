@@ -8,16 +8,7 @@ import ProfileIcon from '../../img/user.png';
 import ContactUs from '../../img/c2.png';
 import CoffeeBeans from '../../img/beans3.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faFacebook,
-  faFacebookMessenger,
-  faInstagram,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
-import {
-  faCoffee,
-  faLongArrowAltRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 
 const Homepage = () => {
   return (
@@ -77,39 +68,6 @@ const Homepage = () => {
           <Link className="link">
             Contact Us <FontAwesomeIcon icon={faLongArrowAltRight} />
           </Link>
-        </span>
-      </div>
-      <div className="homepageThirdDiv">
-        <div className="one">
-          <Link className="link">
-            Coffe-Shop <FontAwesomeIcon icon={faCoffee} />
-          </Link>
-        </div>
-        <div className="two">
-          <Link className="link">Company</Link>
-          <Link className="link">Vision</Link>
-          <Link className="link">Mision</Link>
-        </div>
-        <div className="three">
-          <Link className="link">Career</Link>
-          <Link className="link">Clients</Link>
-          <Link className="link">FAQ</Link>
-        </div>
-        <div className="four">
-          <Link className="link">Location</Link>
-          <Link className="link">Delivery</Link>
-        </div>
-      </div>
-      <div className="homepageFourthDiv">
-        <span className="messageContainer">
-          <FontAwesomeIcon icon={faCoffee} /> All rights reserved, 2021
-        </span>
-
-        <span className="iconsContainer">
-          <FontAwesomeIcon className="brand" icon={faFacebook} />
-          <FontAwesomeIcon className="brand" icon={faInstagram} />
-          <FontAwesomeIcon className="brand" icon={faFacebookMessenger} />
-          <FontAwesomeIcon className="brand" icon={faTwitter} />
         </span>
       </div>
     </div>

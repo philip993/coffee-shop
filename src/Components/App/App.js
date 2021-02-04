@@ -3,6 +3,7 @@ import Homepage from '../Homepage/Homepage';
 import { Switch, Route } from 'react-router-dom';
 import './AppStyle.scss';
 import Menu from '../Menu/Menu';
+import Footer from '../Footer/Footer';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/menu" component={Menu} />
       </Switch>
+      <Footer />
     </div>
   );
 };

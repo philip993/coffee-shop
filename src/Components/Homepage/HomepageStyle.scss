@@ -98,72 +98,6 @@
     }
   }
 
-  .homepageThirdDiv {
-    padding-left: 15%;
-    padding-right: 15%;
-    animation: fade 2s ease;
-    height: 30vh;
-    background-color: #011627;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    .one,
-    .two,
-    .three,
-    .four {
-      width: 22%;
-      color: #fdfffc;
-      display: flex;
-      flex-direction: column;
-      padding-top: 5%;
-
-      .link {
-        text-decoration: none;
-        color: #fdfffc;
-        margin: 3%;
-
-        &:hover {
-          transition: 300ms ease-in;
-          color: #e71d36;
-        }
-      }
-    }
-  }
-
-  .homepageFourthDiv {
-    background-color: #011627;
-    color: #fdfffc;
-    padding-left: 15%;
-    padding-right: 15%;
-    display: flex;
-    flex-direction: row;
-    height: 10vh;
-    justify-content: space-around;
-    animation: fade 2s ease;
-
-    .iconsContainer {
-      width: 40%;
-      .brand {
-        float: right;
-        margin: 2%;
-        width: 25px;
-        height: 25px;
-
-        &:hover {
-          cursor: pointer;
-          transition: 500ms ease-in;
-          color: #2ec4b6;
-        }
-      }
-    }
-
-    .messageContainer {
-      width: 40%;
-      margin-top: 2%;
-    }
-  }
-
   .homepageFifthDiv {
     height: 50vh;
     display: flex;
@@ -297,44 +231,6 @@
       }
     }
 
-    .homepageThirdDiv {
-      padding-left: 5%;
-      padding-right: 5%;
-      height: 20vh;
-
-      .one,
-      .two,
-      .three,
-      .four {
-        width: 25%;
-      }
-    }
-
-    .homepageFourthDiv {
-      padding-left: 5%;
-      padding-right: 5%;
-      display: flex;
-      flex-direction: row;
-      min-height: 10vh;
-      justify-content: space-around;
-      border: 1px solid #011627;
-
-      .iconsContainer {
-        width: 50%;
-        .brand {
-          float: right;
-          margin: 5%;
-          width: 30px;
-          height: 30px;
-        }
-      }
-
-      .messageContainer {
-        width: 30%;
-        margin-top: 3%;
-      }
-    }
-
     .homepageFifthDiv {
       min-height: 50vh;
       padding-left: 5%;
@@ -429,59 +325,6 @@
         .link {
           font-size: 1.1rem;
         }
-      }
-    }
-
-    .homepageThirdDiv {
-      padding-left: 5%;
-      padding-right: 5%;
-      margin-top: 5%;
-      min-height: 70vh;
-      display: grid;
-      grid-template-columns: minmax(auto, 1fr);
-      .one,
-      .two,
-      .three,
-      .four {
-        width: 80%;
-        padding-top: 10%;
-        text-align: center;
-        margin: auto;
-
-        .link {
-          margin: 2%;
-        }
-      }
-    }
-
-    .homepageFourthDiv {
-      background-color: #011627;
-      color: #fdfffc;
-      padding-left: 5%;
-      padding-right: 5%;
-      display: flex;
-      flex-direction: column-reverse;
-      min-height: 15vh;
-
-      .iconsContainer {
-        width: 50%;
-        margin: auto;
-        padding-top: 5%;
-
-        .brand {
-          margin-left: 5%;
-          margin-right: 5%;
-          width: 20px;
-          height: 20px;
-          float: none;
-        }
-      }
-
-      .messageContainer {
-        width: 80%;
-        margin-top: 2%;
-        margin: auto;
-        text-align: center;
       }
     }
 
