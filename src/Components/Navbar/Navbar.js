@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import { Drawer, ListItem, Button } from '@material-ui/core';
+import './NavbarStyle.scss';
 import { Link } from 'react-router-dom';
-
+import { Drawer, ListItem, Button } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faShoppingCart,
+  faUserCircle,
+  faBars,
+} from '@fortawesome/free-solid-svg-icons';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -12,17 +18,38 @@ const Navbar = () => {
   };
   return (
     <div className="navbarDiv">
-      <Button onClick={handleOpen}>Menu</Button>
-      <Drawer open={open} onClose={handleClose}>
-        <ListItem>
-          <Link to="/">Homepage</Link>
-        </ListItem>
-        <ListItem>
-          <Link to="#">#</Link>
-        </ListItem>
-        <ListItem>
-          <Link to="#">#</Link>
-        </ListItem>
+      <div className="navbarFirstDiv">
+        <Button className="btn" onClick={handleOpen}>
+          <FontAwesomeIcon className="icon" icon={faBars} />
+        </Button>
+      </div>
+      <div className="navbarSecondDiv">
+        <Button className="btn">
+          <FontAwesomeIcon className="icon" icon={faUserCircle} />
+        </Button>
+        <Button className="btn">
+          <FontAwesomeIcon className="icon" icon={faShoppingCart} />
+        </Button>
+      </div>
+
+      <Drawer id="drawer" open={open} onClose={handleClose}>
+        <div className="drawerDiv">
+          <ListItem className="listItem">
+            <Link className="link" to="/">
+              Homepage
+            </Link>
+          </ListItem>
+          <ListItem className="listItem">
+            <Link className="link" to="#">
+              #
+            </Link>
+          </ListItem>
+          <ListItem className="listItem">
+            <Link className="link" to="#">
+              #
+            </Link>
+          </ListItem>
+        </div>
       </Drawer>
     </div>
   );
