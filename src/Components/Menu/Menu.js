@@ -5,10 +5,12 @@ import EspressoImg from '../../img/espresso.jpg';
 import BeanStar from '../../img/bean-stars.svg';
 import WaterStar from '../../img/water-stars.svg';
 import CupStar from '../../img/cup-stars.svg';
+import Navbar from '../Navbar/Navbar';
 
 const Menu = () => {
   return (
     <div className="menuDiv">
+      <Navbar />
       <div className="menuFirstDiv">
         <h1>Coffe Shop Menu</h1>
       </div>
