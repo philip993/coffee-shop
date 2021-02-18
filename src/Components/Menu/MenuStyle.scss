@@ -35,6 +35,7 @@
     .card {
       border: 1px solid #011627;
       background-color: #011627;
+      margin-top: 10%;
 
       .cardHeader {
         background-color: #011627;
@@ -115,6 +116,151 @@
             background-color: #fdfffc;
             color: #2ec4b6;
             transition: 300ms ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1100px) {
+  .menuDiv {
+    min-height: 100vh;
+
+    .menuFirstDiv {
+      width: 100%;
+
+      h1 {
+        margin-top: 0;
+        padding-top: 15%;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: rgba(#011627, 0.2);
+      }
+    }
+
+    .menuSecondDiv {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 5%;
+      justify-content: space-evenly;
+
+      .card {
+        border: 1px solid #011627;
+        background-color: #011627;
+
+        .cardHeader {
+          h4 {
+            font-size: 1.4rem;
+          }
+        }
+
+        .cardMedia {
+          width: 300px;
+          height: 300px;
+          padding-left: 5%;
+          padding-right: 5%;
+          padding-top: 5%;
+        }
+
+        .cardContent {
+          display: flex;
+          flex-direction: column;
+
+          .detailSpan {
+            p {
+              font-weight: normal;
+            }
+          }
+
+          .starSpan {
+            p {
+              font-weight: normal;
+            }
+            .beanStar {
+              width: 20px;
+              height: 20px;
+              margin: auto;
+            }
+          }
+        }
+
+        .cardFooter {
+          .btnPlus {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .menuDiv {
+    min-height: 100vh;
+
+    .menuFirstDiv {
+      width: 100%;
+      height: 100vh;
+
+      h1 {
+        margin-top: 0;
+        padding-top: 50%;
+        font-size: 3rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: rgba(#011627, 0.2);
+      }
+    }
+
+    .menuSecondDiv {
+      display: grid;
+      grid-template-columns: auto;
+      justify-content: center;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      .card {
+        border: 1px solid #011627;
+        background-color: #011627;
+        margin-top: 10%;
+
+        .cardHeader {
+          h4 {
+            font-size: 1.3rem;
+          }
+        }
+
+        .cardMedia {
+          width: 250px;
+          height: 250px;
+          padding-left: 5%;
+          padding-right: 5%;
+          padding-top: 5%;
+        }
+
+        .cardContent {
+          .detailSpan {
+            p {
+              font-weight: normal;
+            }
+          }
+
+          .starSpan {
+            p {
+              font-weight: normal;
+            }
+            .beanStar {
+              width: 20px;
+              height: 20px;
+              margin: auto;
+            }
+          }
+        }
+
+        .cardFooter {
+          .btnPlus {
+            width: 70%;
           }
         }
       }
