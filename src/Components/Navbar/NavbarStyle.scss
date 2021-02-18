@@ -1,0 +1,133 @@
+.navbarDiv {
+  width: 100%;
+  height: 5vh;
+  background-color: #011627;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 9999;
+  position: relative;
+
+  .navbarFirstDiv {
+    margin: auto;
+    margin-left: 0%;
+    .btn {
+      color: #fdfffc;
+
+      .icon {
+        width: 25px;
+        height: 25px;
+
+        &:hover {
+          color: #2ec4b6;
+          transition: 300ms ease-in;
+        }
+      }
+    }
+  }
+
+  .navbarSecondDiv {
+    margin: auto;
+    margin-right: 0%;
+    .btn {
+      color: #fdfffc;
+
+      .icon {
+        width: 25px;
+        height: 25px;
+
+        &:hover {
+          color: #2ec4b6;
+          transition: 300ms ease-in;
+        }
+      }
+    }
+  }
+}
+
+#drawer {
+  z-index: -1;
+  position: relative;
+  height: calc(100vh - 5vh);
+  .drawerDiv {
+    padding-top: 5vh;
+    width: 350px;
+    height: 100%;
+    background-color: #011627;
+    margin-top: 5%;
+  }
+  .listItem {
+    background-color: #fdfffc;
+    width: 100%;
+    padding: 0%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+    .link {
+      width: 100%;
+      text-decoration: none;
+      padding-left: 10%;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      color: #ff9f1c;
+      font-weight: bold;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+
+      &:hover {
+        font-style: italic;
+        color: #fdfffc;
+        background-color: #ff9f1c;
+        text-decoration: underline;
+        transition: background-color 200ms ease-in;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .navbarDiv {
+    width: 100%;
+    height: 10vh;
+
+    .navbarFirstDiv {
+      .btn {
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .navbarSecondDiv {
+      .btn {
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  #drawer {
+    height: calc(100vh - 10vh);
+    .drawerDiv {
+      padding-top: 10vh;
+    }
+    .listItem {
+      .link {
+        font-size: 1rem;
+        letter-spacing: 0px;
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
