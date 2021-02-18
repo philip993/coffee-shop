@@ -57,7 +57,7 @@
     margin-top: 5%;
   }
   .listItem {
-    background-color: #ff9f1c;
+    background-color: #fdfffc;
     width: 100%;
     padding: 0%;
     margin-top: 4%;
@@ -69,15 +69,15 @@
       padding-left: 10%;
       padding-top: 3%;
       padding-bottom: 3%;
-      color: #fdfffc;
+      color: #ff9f1c;
       font-weight: bold;
       font-size: 1.2rem;
       letter-spacing: 1px;
 
       &:hover {
         font-style: italic;
-        color: #ff9f1c;
-        background-color: #fdfffc;
+        color: #fdfffc;
+        background-color: #ff9f1c;
         text-decoration: underline;
         transition: background-color 200ms ease-in;
       }
