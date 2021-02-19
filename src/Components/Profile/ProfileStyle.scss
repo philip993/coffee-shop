@@ -1,0 +1,81 @@
+.profile {
+  min-height: 100vh;
+
+  .profileFirstDiv {
+    width: 100%;
+    height: 40vh;
+    background-image: url('../../img/menu-bg.jpg');
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade 2s ease;
+
+    h1 {
+      margin-top: 0;
+      padding-top: 8%;
+      text-align: center;
+      color: #fdfffc;
+      font-size: 5rem;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  }
+
+  .profileSecondDiv {
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 1px solid #011627;
+    display: flex;
+    flex-direction: row;
+
+    .card {
+      width: 30%;
+      height: 50vh;
+      border: 1px solid #011627;
+      padding: 1%;
+
+      .personal {
+        text-align: center;
+        border: 1px solid #011627;
+        height: 60%;
+
+        .avatar {
+          width: 150px;
+          height: 150px;
+          margin: auto;
+        }
+
+        .location {
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          justify-content: center;
+
+          h4 {
+            margin: 0;
+            padding-left: 5%;
+          }
+
+          .locationIcon {
+            width: 5%;
+            height: 5%;
+          }
+        }
+      }
+
+      .member {
+        border: 1px solid #011627;
+        margin-top: 20%;
+        align-items: flex-end;
+        text-align: center;
+        height: 20%;
+      }
+    }
+
+    .content {
+      width: 70%;
+      border: 1px solid #011627;
+      height: 70vh;
+    }
+  }
+}
