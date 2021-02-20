@@ -2,8 +2,9 @@ import React from 'react';
 import './ProfileStyle.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Navbar from '../Navbar/Navbar';
-import { Avatar } from '@material-ui/core';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { Avatar, Card, CardContent } from '@material-ui/core';
+import { faMapMarkerAlt, faSort } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
   return (
@@ -28,7 +29,33 @@ const Profile = () => {
           </div>
         </div>
         <div className="content">
-          <h1>Content</h1>
+          <div className="contentMenu">
+            <Link className="contentMenuOption">One</Link>
+            <Link className="contentMenuOption">Two</Link>
+          </div>
+          <div className="contentSort">
+            <span className="sort">
+              <h4>Sort</h4>
+              <FontAwesomeIcon className="sortIcon" icon={faSort} />
+            </span>
+          </div>
+          <div className="contentMain">
+            <h1>Content</h1>
+            <div className="orderDiv">
+              <Card className="order">
+                <CardContent className="orderHeader">
+                  <h4>Order #0001</h4>{' '}
+                </CardContent>
+                <CardContent className="orderBody">
+                  <h4>2 x Espresso</h4>
+                  <h4>2 x Americano</h4>
+                </CardContent>
+                <CardContent className="orderFooter">
+                  <h4>Sum: $ 10.00</h4>{' '}
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </div>
     </div>
