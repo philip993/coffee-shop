@@ -44,14 +44,34 @@ const Profile = () => {
             <div className="orderDiv">
               <Card className="order">
                 <CardContent className="orderHeader">
-                  <h4>Order #0001</h4>{' '}
+                  <tr className="tableDate">
+                    <td className="tableOrderDate">10.01.2021</td>
+                  </tr>
+                  <tr className="tableOrderNo">
+                    <td>Order:</td>
+                    <td className="tableOrderNumber">#0001</td>
+                  </tr>
                 </CardContent>
                 <CardContent className="orderBody">
-                  <h4>2 x Espresso</h4>
-                  <h4>2 x Americano</h4>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr className="tableOrderBody">
+                    <td>Espresso</td>
+                    <td>x</td>
+                    <td>1</td>
+                  </tr>
+                  <tr className="tableOrderBody">
+                    <td>Cafe</td>
+                    <td>x</td>
+                    <td>10</td>
+                  </tr>
                 </CardContent>
                 <CardContent className="orderFooter">
-                  <h4>Sum: $ 10.00</h4>{' '}
+                  <tr className="tableOrderFooter">
+                    <td className="tableOrderTotal">Total:</td>
+                    <td className="tableOrderSum"> $ 100.00</td>
+                  </tr>
                 </CardContent>
               </Card>
             </div>
