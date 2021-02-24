@@ -41,7 +41,7 @@ const Profile = () => {
           </div>
           <div className="contentMain">
             <h1>Content</h1>
-            <div className="orderDiv">
+            {/* <div className="orderDiv">
               <Card className="order">
                 <CardContent className="orderHeader">
                   <tr className="tableDate">
@@ -72,6 +72,57 @@ const Profile = () => {
                     <td className="tableOrderTotal">Total:</td>
                     <td className="tableOrderSum"> $ 100.00</td>
                   </tr>
+                </CardContent>
+              </Card>
+            </div> */}
+            <div className="profileDiv">
+              <Card className="personal">
+                <CardContent>
+                  <span className="personalHeader">
+                    <h4>Personal</h4>
+                  </span>
+
+                  <span>
+                    <h4 className="field">Full Name</h4>
+                    <h4 className="info">John Doe</h4>
+                  </span>
+                  <span>
+                    <h4 className="field">Date of Birth</h4>
+                    <h4 className="info">01.01.1990</h4>
+                  </span>
+                  <span>
+                    <h4 className="field">Address</h4>
+                    <h4 className="info">Pearl Side 4</h4>
+                  </span>
+                  <span>
+                    <h4 className="field">Address 2</h4>
+                    <h4 className="info">New York, US</h4>
+                  </span>
+                </CardContent>
+                <CardContent>
+                  <span className="personalHeader">
+                    {' '}
+                    <h4>Contact</h4>
+                  </span>
+
+                  <span>
+                    <h4>Phone</h4>
+                    <h4 className="info">+100 0100 4224</h4>
+                  </span>
+                  <span>
+                    <h4>e-mail</h4>
+                    <h4 className="info">johndoe@info.com</h4>
+                  </span>
+                </CardContent>
+                <CardContent>
+                  <span className="personalHeader">
+                    <h4>Payment Details</h4>
+                  </span>
+
+                  <span>
+                    <h4>Card</h4>
+                    <h4 className="info">**** **** **** 5445</h4>
+                  </span>
                 </CardContent>
               </Card>
             </div>
