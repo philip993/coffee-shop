@@ -40,7 +40,7 @@ const Homepage = () => {
         <div className="linkContainer">
           <img className="icons" src={ProfileIcon} alt="profile" />
           <p>Your personal information at one place.</p>
-          <Link className="link">
+          <Link to="/profile" className="link">
             View Profile <FontAwesomeIcon icon={faLongArrowAltRight} />
           </Link>
         </div>

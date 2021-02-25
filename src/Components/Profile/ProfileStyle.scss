@@ -1,0 +1,466 @@
+.profile {
+  min-height: 100vh;
+
+  .profileFirstDiv {
+    width: 100%;
+    height: 40vh;
+    background-image: url('../../img/menu-bg.jpg');
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade 2s ease;
+
+    h1 {
+      margin-top: 0;
+      padding-top: 8%;
+      text-align: center;
+      color: #fdfffc;
+      font-size: 5rem;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  }
+
+  .profileSecondDiv {
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 1px solid #011627;
+    display: flex;
+    flex-direction: row;
+    animation: fade 2s ease;
+
+    .card {
+      width: 30%;
+      height: 50vh;
+      padding: 1%;
+      background-color: #011627;
+
+      .personal {
+        text-align: center;
+        border: 1px solid #011627;
+        height: 80%;
+
+        .avatar {
+          width: 250px;
+          height: 250px;
+          margin: auto;
+          margin-top: -25%;
+        }
+
+        h1 {
+          color: #fdfffc;
+          margin-top: 10%;
+        }
+
+        .location {
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          justify-content: center;
+
+          h4 {
+            margin: 0;
+            padding-left: 2%;
+            color: #fdfffc;
+          }
+
+          .locationIcon {
+            width: 20px;
+            height: 20px;
+            color: #ff9f1c;
+          }
+        }
+      }
+
+      .member {
+        align-items: flex-end;
+        text-align: center;
+        height: 20%;
+
+        h4 {
+          margin: 0;
+          padding-top: 10%;
+          color: #ff9f1c;
+        }
+        h5 {
+          margin: 0;
+          color: #fdfffc;
+        }
+      }
+    }
+
+    .content {
+      width: 70%;
+      min-height: 70vh;
+
+      .contentMenu {
+        display: flex;
+        flex-direction: row;
+        padding-left: 2%;
+
+        .contentMenuOption {
+          border-bottom: 2px solid #e71d36;
+          width: 10%;
+          text-align: center;
+          margin-left: 5%;
+          margin-top: 2%;
+          text-decoration: none;
+          color: #011627;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+
+        .contentMenuOptionInactive {
+          width: 10%;
+          text-align: center;
+          margin-left: 5%;
+          margin-top: 2%;
+          text-decoration: none;
+          color: #011627;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+
+      .contentSort {
+        .sort {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+
+          .sortIcon {
+            width: 20px;
+            height: 20px;
+          }
+
+          h4 {
+            margin: 0;
+            padding-right: 2%;
+          }
+        }
+      }
+
+      .contentMain {
+        margin-top: 5%;
+        height: 80%;
+        padding-left: 2%;
+        margin-bottom: 5%;
+
+        .profileDiv {
+          .personal {
+            .personalHeader {
+              background-color: #011627;
+              color: #fdfffc;
+            }
+
+            span {
+              width: 80%;
+              display: grid;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              margin: auto;
+              border: 1px solid #011627;
+              margin-top: 2%;
+              font-size: 1.2rem;
+
+              h4 {
+                margin: 0%;
+                padding: 2% 0% 2% 5%;
+                font-weight: bold;
+              }
+
+              .info {
+                padding-right: 5%;
+                text-align: right;
+              }
+            }
+          }
+        }
+
+        .orderDiv {
+          display: grid;
+          grid-template-columns: auto auto;
+
+          .order {
+            border: 1px solid #011627;
+            margin: 5% 2% 5% 2%;
+
+            .orderHeader {
+              background-color: #011627;
+              display: flex;
+              flex-direction: column;
+              color: #fdfffc;
+              font-weight: bold;
+              padding-top: 5%;
+              padding-bottom: 5%;
+
+              .tableDate {
+                .tableOrderDate {
+                  float: right;
+                }
+              }
+
+              .tableOrderNo {
+                .tableOrderNumber {
+                  padding-left: 10%;
+                  color: #ff9f1c;
+                }
+              }
+            }
+
+            .orderBody {
+              font-size: 1.2rem;
+              font-weight: bold;
+              padding: 10%;
+
+              .tableOrderBody {
+                display: grid;
+                grid-template-columns: 70% 15% 25%;
+                border-bottom: 2px solid #011627;
+              }
+            }
+
+            .orderFooter {
+              background-color: #011627;
+              color: #fdfffc;
+              display: flex;
+              flex-direction: row-reverse;
+              font-weight: bold;
+
+              .tableOrderFooter {
+                .tableOrderTotal {
+                  padding-right: 10%;
+                }
+                .tableOrderSum {
+                  color: #ff9f1c;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1100px) {
+  .profile {
+    min-height: 100vh;
+
+    .profileFirstDiv {
+      width: 100%;
+
+      h1 {
+        margin-top: 0;
+        padding-top: 15%;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: rgba(#011627, 0.2);
+      }
+    }
+
+    .profileSecondDiv {
+      padding-left: 5%;
+      padding-right: 5%;
+
+      .card {
+        width: 40%;
+        height: 50vh;
+        padding: 1%;
+
+        .personal {
+          height: 80%;
+
+          .avatar {
+            width: 250px;
+            height: 250px;
+            margin-top: -25%;
+          }
+
+          h1 {
+            margin-top: 20%;
+          }
+        }
+
+        .member {
+          h4 {
+            padding-top: 20%;
+          }
+          h5 {
+            padding-top: 5%;
+          }
+        }
+      }
+
+      .content {
+        width: 70%;
+        min-height: 70vh;
+
+        .contentMenu {
+          .contentMenuOption,
+          .contentMenuOptionInactive {
+            width: 15%;
+            margin-top: 4%;
+          }
+        }
+
+        .contentSort {
+          .sort {
+            padding-top: 2%;
+            .sortIcon {
+              width: 25px;
+              height: 25px;
+            }
+
+            h4 {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .contentMain {
+          margin-top: 5%;
+          height: 80%;
+          padding-left: 2%;
+
+          .profileDiv {
+            .personal {
+              span {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto;
+              }
+            }
+          }
+
+          .orderDiv {
+            display: grid;
+            grid-template-columns: auto;
+
+            .order {
+              margin: 5%;
+
+              .orderHeader {
+                font-size: 1.1rem;
+              }
+
+              .orderBody {
+                font-size: 1.2rem;
+              }
+
+              .orderFooter {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .profile {
+    min-height: 100vh;
+
+    .profileFirstDiv {
+      width: 100%;
+      height: 100vh;
+
+      h1 {
+        margin-top: 0;
+        padding-top: 50%;
+        font-size: 3rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: rgba(#011627, 0.2);
+      }
+    }
+
+    .profileSecondDiv {
+      padding-left: 5%;
+      padding-right: 5%;
+      display: grid;
+      grid-template-columns: auto;
+      border: none;
+
+      .card {
+        width: 100%;
+        height: 80vh;
+        margin: auto;
+        padding: 0%;
+
+        .personal {
+          h1 {
+            margin-top: 15%;
+          }
+        }
+      }
+
+      .content {
+        width: 100%;
+        min-height: 70vh;
+
+        .contentMenu {
+          padding-left: 5%;
+
+          .contentMenuOption,
+          .contentMenuOptionInactive {
+            width: 25%;
+            margin-left: 5%;
+            margin-top: 5%;
+          }
+        }
+
+        .contentSort {
+          .sort {
+            padding-top: 5%;
+            font-size: 1.2rem;
+            .sortIcon {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+
+        .contentMain {
+          margin-top: 5%;
+          margin-bottom: 5%;
+
+          .profileDiv {
+            .personal {
+              .personalHeader {
+                background-color: #011627;
+                color: #fdfffc;
+              }
+
+              span {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto;
+                margin: auto;
+                font-size: 1rem;
+              }
+            }
+          }
+
+          .orderDiv {
+            display: grid;
+            grid-template-columns: auto;
+
+            .order {
+              margin: 5%;
+
+              .orderHeader {
+                font-size: 1.1rem;
+              }
+
+              .orderFooter {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
