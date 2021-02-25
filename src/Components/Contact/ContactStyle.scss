@@ -1,0 +1,53 @@
+.contact {
+  min-height: 100vh;
+
+  .contactFirstDiv {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 1px solid #011627;
+
+    .contactImage {
+      width: 50%;
+      height: 70vh;
+      border: 1px solid #011627;
+
+      .contactAddress {
+        border: 1px solid #011627;
+      }
+
+      .contactPhone {
+        border: 1px solid #011627;
+      }
+
+      .contactMail {
+        border: 1px solid #011627;
+      }
+    }
+
+    .contactForm {
+      width: 50%;
+      height: 70vh;
+      border: 1px solid #011627;
+
+      .form {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border: 1px solid #011627;
+
+        .formGroup {
+          border: 1px solid #011627;
+
+          .formLabel {
+          }
+
+          .formInput {
+          }
+        }
+      }
+    }
+  }
+}
