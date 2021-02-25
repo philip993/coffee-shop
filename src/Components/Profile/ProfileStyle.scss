@@ -27,6 +27,7 @@
     border: 1px solid #011627;
     display: flex;
     flex-direction: row;
+    animation: fade 2s ease;
 
     .card {
       width: 30%;
@@ -108,6 +109,17 @@
           font-size: 1.2rem;
           font-weight: bold;
         }
+
+        .contentMenuOptionInactive {
+          width: 10%;
+          text-align: center;
+          margin-left: 5%;
+          margin-top: 2%;
+          text-decoration: none;
+          color: #011627;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
       }
 
       .contentSort {
@@ -144,13 +156,13 @@
             span {
               width: 80%;
               display: grid;
-              grid-template-columns: auto auto;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
               margin: auto;
               border: 1px solid #011627;
               margin-top: 2%;
+              font-size: 1.2rem;
 
               h4 {
-                // margin: 2% 0% 2% 0%;
                 margin: 0%;
                 padding: 2% 0% 2% 5%;
                 font-weight: bold;
@@ -284,7 +296,8 @@
         min-height: 70vh;
 
         .contentMenu {
-          .contentMenuOption {
+          .contentMenuOption,
+          .contentMenuOptionInactive {
             width: 15%;
             margin-top: 4%;
           }
@@ -308,6 +321,16 @@
           margin-top: 5%;
           height: 80%;
           padding-left: 2%;
+
+          .profileDiv {
+            .personal {
+              span {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto;
+              }
+            }
+          }
 
           .orderDiv {
             display: grid;
@@ -363,6 +386,8 @@
       .card {
         width: 100%;
         height: 80vh;
+        margin: auto;
+        padding: 0%;
 
         .personal {
           h1 {
@@ -378,7 +403,8 @@
         .contentMenu {
           padding-left: 5%;
 
-          .contentMenuOption {
+          .contentMenuOption,
+          .contentMenuOptionInactive {
             width: 25%;
             margin-left: 5%;
             margin-top: 5%;
@@ -399,6 +425,23 @@
         .contentMain {
           margin-top: 5%;
           margin-bottom: 5%;
+
+          .profileDiv {
+            .personal {
+              .personalHeader {
+                background-color: #011627;
+                color: #fdfffc;
+              }
+
+              span {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto;
+                margin: auto;
+                font-size: 1rem;
+              }
+            }
+          }
 
           .orderDiv {
             display: grid;
