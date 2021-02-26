@@ -2,6 +2,12 @@ import React from 'react';
 import './ContactStyle.scss';
 import Navbar from '../Navbar/Navbar';
 import { FormGroup, FormLabel, InputBase } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faEnvelope,
+  faMapMarkerAlt,
+  faPhoneAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   return (
@@ -9,18 +15,26 @@ const Contact = () => {
       <Navbar />
       <div className="contactFirstDiv">
         <div className="contactImage">
-          <h1>Image</h1>
           <div className="contactAddress">
-            <h4>Address</h4>
-            <h4>Mountain Hills, New York</h4>
+            <FontAwesomeIcon className="icon" icon={faMapMarkerAlt} />
+            <span>
+              <h3>Address</h3>
+              <h4>Mountain Hills, New York</h4>
+            </span>
           </div>
           <div className="contactPhone">
-            <h4>Let's Talk</h4>
-            <h4>+100 555 4444</h4>
+            <FontAwesomeIcon className="icon" icon={faPhoneAlt} />
+            <span>
+              <h3>Let's Talk</h3>
+              <h4>+100 555 4444</h4>
+            </span>
           </div>
           <div className="contactMail">
-            <h4>Support</h4>
-            <h4>info@coffeeshop.com</h4>
+            <FontAwesomeIcon className="icon" icon={faEnvelope} />
+            <span>
+              <h3>Support</h3>
+              <h4>info@coffeeshop.com</h4>
+            </span>
           </div>
         </div>
         <div className="contactForm">
