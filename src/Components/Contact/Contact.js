@@ -1,7 +1,13 @@
 import React from 'react';
 import './ContactStyle.scss';
 import Navbar from '../Navbar/Navbar';
-import { FormGroup, FormLabel, InputBase } from '@material-ui/core';
+import {
+  FormGroup,
+  FormLabel,
+  InputBase,
+  TextareaAutosize,
+  Button,
+} from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faEnvelope,
@@ -38,34 +44,46 @@ const Contact = () => {
           </div>
         </div>
         <div className="contactForm">
-          <h1>Form</h1>
+          <h1>Contact Us</h1>
           <form className="form">
             <FormGroup className="formGroup">
-              <FormLabel className="formLabel">Full Name *</FormLabel>
+              <FormLabel className="formLabel">
+                <p>Full Name *</p>
+              </FormLabel>
               <InputBase className="formInput" placeholder="e.g. John Doe" />
             </FormGroup>
             <FormGroup className="formGroup">
-              <FormLabel className="formLabel">Email *</FormLabel>
+              <FormLabel className="formLabel">
+                <p>Email *</p>
+              </FormLabel>
               <InputBase
                 className="formInput"
                 placeholder="e.g. john@john.com"
               />
             </FormGroup>
             <FormGroup className="formGroup">
-              <FormLabel className="formLabel">Phone *</FormLabel>
+              <FormLabel className="formLabel">
+                <p>Phone *</p>
+              </FormLabel>
               <InputBase
                 className="formInput"
                 placeholder="e.g. +100 555 1111"
               />
             </FormGroup>
             <FormGroup className="formGroup">
-              <FormLabel className="formLabel">Message *</FormLabel>
-              <InputBase
+              <FormLabel className="formLabel">
+                <p>Message *</p>
+              </FormLabel>
+              <TextareaAutosize
                 multiline
-                rows="5"
-                className="formInput"
+                rowsMin={4}
+                rowsMax={4}
+                className="formTextArea"
                 placeholder="Write a message.."
               />
+            </FormGroup>
+            <FormGroup className="formGroup">
+              <Button className="btn">Send Message</Button>
             </FormGroup>
           </form>
         </div>
