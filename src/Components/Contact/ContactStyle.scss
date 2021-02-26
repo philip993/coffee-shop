@@ -11,18 +11,93 @@
     .contactImage {
       width: 50%;
       height: 70vh;
-      border: 1px solid #011627;
+      background-image: url('../../img/contact.jpg');
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-size: cover;
+      animation: fade 2s ease;
+      color: #fdfffc;
 
       .contactAddress {
-        border: 1px solid #011627;
+        padding-left: 2%;
+        display: flex;
+        flex-direction: row;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          padding-left: 2%;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+
+          h3 {
+            margin: 0;
+            padding-left: 10%;
+          }
+          h4 {
+            padding-left: 10%;
+          }
+        }
       }
 
       .contactPhone {
-        border: 1px solid #011627;
+        padding-left: 2%;
+        display: flex;
+        flex-direction: row;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          padding-left: 2%;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+
+          h3 {
+            margin: 0;
+            padding-left: 10%;
+          }
+          h4 {
+            padding-left: 10%;
+            color: #e71d36;
+          }
+        }
       }
 
       .contactMail {
-        border: 1px solid #011627;
+        padding-left: 2%;
+        display: flex;
+        flex-direction: row;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          padding-left: 2%;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+
+          h3 {
+            margin: 0;
+            padding-left: 10%;
+          }
+          h4 {
+            padding-left: 10%;
+            color: #e71d36;
+          }
+        }
       }
     }
 
@@ -49,5 +124,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
