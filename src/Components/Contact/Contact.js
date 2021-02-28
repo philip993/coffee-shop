@@ -76,10 +76,10 @@ const Contact = () => {
               </FormLabel>
               <TextareaAutosize
                 multiline
-                rowsMin={4}
-                rowsMax={4}
+                rowsMin={3}
+                rowsMax={3}
                 className="formTextArea"
-                placeholder="Write a message.."
+                placeholder="Write a message...."
               />
             </FormGroup>
             <FormGroup className="formGroup">
