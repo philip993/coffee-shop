@@ -4,7 +4,6 @@
   .contactFirstDiv {
     display: flex;
     flex-direction: row;
-    padding-left: 15%;
     padding-right: 15%;
 
     .contactImage {
@@ -18,6 +17,7 @@
       background-size: cover;
       animation: fade 2s ease;
       color: #fdfffc;
+      padding-left: 15%;
 
       .contactAddress {
         padding-left: 2%;
@@ -333,6 +333,94 @@
               width: 70%;
               margin-top: 5%;
               margin-bottom: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 2400px) {
+  .contact {
+    min-height: 100vh;
+
+    .contactFirstDiv {
+      // font-size: 1.5rem;
+      .contactImage {
+        width: 55%;
+
+        .contactAddress {
+          .icon {
+            width: 35px;
+            height: 35px;
+          }
+
+          span {
+            h3 {
+              margin: 0;
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+
+        .contactPhone {
+          .icon {
+            width: 35px;
+            height: 35px;
+          }
+
+          span {
+            h3 {
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+
+        .contactMail {
+          .icon {
+            width: 35px;
+            height: 35px;
+          }
+
+          span {
+            h3 {
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+      }
+
+      .contactForm {
+        width: 45%;
+        height: 90vh;
+        padding-left: 2%;
+        animation: fade 2s ease;
+
+        h1 {
+          text-align: center;
+          font-size: 5rem;
+          margin-bottom: 0;
+          padding-top: 5%;
+        }
+
+        .form {
+          height: 90%;
+          width: 80%;
+          margin: auto;
+
+          .formGroup {
+            .btn {
+              width: 30%;
             }
           }
         }
