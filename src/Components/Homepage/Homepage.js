@@ -65,7 +65,7 @@ const Homepage = () => {
             Having some more question about Us? Feel free to contact us on link
             bellow.
           </p>
-          <Link className="link">
+          <Link to="contact" className="link">
             Contact Us <FontAwesomeIcon icon={faLongArrowAltRight} />
           </Link>
         </span>

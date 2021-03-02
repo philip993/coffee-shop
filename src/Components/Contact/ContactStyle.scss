@@ -1,0 +1,439 @@
+.contact {
+  min-height: 100vh;
+
+  .contactFirstDiv {
+    display: flex;
+    flex-direction: row;
+    padding-right: 15%;
+
+    .contactImage {
+      width: 55%;
+      height: 100vh;
+      background-image: url('../../img/contact.jpg');
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-size: cover;
+      animation: fade 2s ease;
+      color: #fdfffc;
+      padding-left: 15%;
+
+      .contactAddress {
+        padding-left: 2%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 5%;
+        padding-top: 5%;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          padding-left: 2%;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+
+          h3 {
+            margin: 0;
+            padding-left: 10%;
+          }
+          h4 {
+            padding-left: 10%;
+          }
+        }
+      }
+
+      .contactPhone {
+        padding-left: 2%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 5%;
+        padding-top: 5%;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          padding-left: 2%;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+
+          h3 {
+            margin: 0;
+            padding-left: 10%;
+          }
+          h4 {
+            padding-left: 10%;
+            color: #e71d36;
+          }
+        }
+      }
+
+      .contactMail {
+        padding-left: 2%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 5%;
+        padding-top: 5%;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          padding-left: 2%;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+
+          h3 {
+            margin: 0;
+            padding-left: 10%;
+          }
+          h4 {
+            padding-left: 10%;
+            color: #e71d36;
+          }
+        }
+      }
+    }
+
+    .contactForm {
+      width: 45%;
+      height: 90vh;
+      padding-left: 2%;
+      animation: fade 2s ease;
+
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 0;
+      }
+
+      .form {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .formGroup {
+          padding-top: 2%;
+          padding-bottom: 2%;
+          .formLabel {
+            border: 1px solid #7a7a7a;
+            padding-left: 4%;
+            background-color: #011627;
+            box-shadow: 0px 0px 2px #011627;
+            margin: 1px;
+
+            p {
+              font-weight: bold;
+              color: #fdfffc;
+            }
+          }
+
+          .formInput {
+            border: 1px solid #7a7a7a;
+            padding-left: 4%;
+            background-color: #fdfffc;
+            box-shadow: 0px 0px 2px #7a7a7a;
+            height: 50px;
+            margin: 1px;
+          }
+
+          .formTextArea {
+            resize: none;
+            padding-left: 4%;
+            padding-top: 2%;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: bold;
+            background-color: #fdfffc;
+            border: 1px solid #7a7a7a;
+            box-shadow: 0px 0px 2px #7a7a7a;
+          }
+
+          .btn {
+            border: 1px solid #e71d36;
+            background-color: #e71d36;
+            color: #fdfffc;
+            font-weight: bold;
+            width: 40%;
+            margin: auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1100px) {
+  .contact {
+    min-height: 100vh;
+
+    .contactFirstDiv {
+      padding-left: 0%;
+      padding-right: 5%;
+
+      .contactImage {
+        padding-left: 5%;
+
+        .contactAddress {
+          padding-bottom: 10%;
+          padding-top: 10%;
+        }
+
+        .contactPhone {
+          padding-bottom: 10%;
+          padding-top: 10%;
+        }
+
+        .contactMail {
+          padding-bottom: 10%;
+          padding-top: 10%;
+        }
+      }
+
+      .contactForm {
+        width: 45%;
+        height: 90vh;
+        padding-left: 2%;
+        animation: fade 2s ease;
+
+        h1 {
+          text-align: center;
+          font-size: 3rem;
+          margin-bottom: 0;
+        }
+
+        .form {
+          height: 90%;
+
+          .formGroup {
+            .formInput {
+              height: 50px;
+            }
+
+            .formTextArea {
+              padding-left: 4%;
+              padding-right: 4%;
+              margin-right: 1px;
+            }
+
+            .btn {
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .contact {
+    min-height: 100vh;
+
+    .contactFirstDiv {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding-left: 0%;
+      padding-right: 0%;
+
+      .contactImage {
+        width: 90%;
+        height: 90vh;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        .contactAddress {
+          span {
+            h3 {
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+
+        .contactPhone {
+          padding-bottom: 5%;
+          padding-top: 5%;
+
+          span {
+            h3 {
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+
+        .contactMail {
+          span {
+            h3 {
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+      }
+
+      .contactForm {
+        width: 90%;
+        min-height: 120vh;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        h1 {
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 5%;
+        }
+
+        .form {
+          height: 90%;
+
+          .formGroup {
+            padding-top: 2%;
+            padding-bottom: 2%;
+
+            .formInput {
+              border: 1px solid #7a7a7a;
+              padding-left: 4%;
+              background-color: #fdfffc;
+              box-shadow: 0px 0px 2px #7a7a7a;
+              height: 50px;
+              margin: 1px;
+            }
+
+            .formTextArea {
+              resize: none;
+              padding-left: 4%;
+              padding-top: 2%;
+              margin: 1px;
+            }
+
+            .btn {
+              width: 70%;
+              margin-top: 5%;
+              margin-bottom: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 2400px) {
+  .contact {
+    min-height: 100vh;
+
+    .contactFirstDiv {
+      // font-size: 1.5rem;
+      .contactImage {
+        width: 55%;
+
+        .contactAddress {
+          .icon {
+            width: 35px;
+            height: 35px;
+          }
+
+          span {
+            h3 {
+              margin: 0;
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+
+        .contactPhone {
+          .icon {
+            width: 35px;
+            height: 35px;
+          }
+
+          span {
+            h3 {
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+
+        .contactMail {
+          .icon {
+            width: 35px;
+            height: 35px;
+          }
+
+          span {
+            h3 {
+              padding-left: 15%;
+            }
+            h4 {
+              padding-left: 15%;
+            }
+          }
+        }
+      }
+
+      .contactForm {
+        width: 45%;
+        height: 90vh;
+        padding-left: 2%;
+        animation: fade 2s ease;
+
+        h1 {
+          text-align: center;
+          font-size: 5rem;
+          margin-bottom: 0;
+          padding-top: 5%;
+        }
+
+        .form {
+          height: 90%;
+          width: 80%;
+          margin: auto;
+
+          .formGroup {
+            .btn {
+              width: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
