@@ -13,11 +13,11 @@ const Selection = () => {
       </div>
       <div className="selectionSecondDiv">
         <Card className="card">
-          <CardContent className="cardHeader">
-            <h4>Arabica</h4>
-          </CardContent>
           <CardContent className="cardImg">
             <img className="cardMedia" src={ArabicaImg} alt="espresso" />
+          </CardContent>
+          <CardContent className="cardHeader">
+            <h4>Arabica</h4>
           </CardContent>
           <CardContent className="cardContent">
             <span className="originSpan">
@@ -42,11 +42,11 @@ const Selection = () => {
           </CardContent>
         </Card>
         <Card className="card">
-          <CardContent className="cardHeader">
-            <h4>Arabica</h4>
-          </CardContent>
           <CardContent className="cardImg">
             <img className="cardMedia" src={ArabicaImg} alt="espresso" />
+          </CardContent>
+          <CardContent className="cardHeader">
+            <h4>Arabica</h4>
           </CardContent>
           <CardContent className="cardContent">
             <span className="originSpan">
@@ -54,6 +54,10 @@ const Selection = () => {
               <p>
                 Arabica coffee is a type of coffee made from the beans of the
                 Coffea arabica plant. Arabica originated in the southwestern
+                highlands of Ethiopia and is the most popular kind of coffee
+                worldwide – making up 60% or more of coffee production in the
+                world. Arabica coffee is a type of coffee made from the beans of
+                the Coffea arabica plant. Arabica originated in the southwestern
                 highlands of Ethiopia and is the most popular kind of coffee
                 worldwide – making up 60% or more of coffee production in the
                 world.
