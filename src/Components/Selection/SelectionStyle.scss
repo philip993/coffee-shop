@@ -1,0 +1,251 @@
+.selection {
+  min-height: 100vh;
+
+  .selectionFirstDiv {
+    width: 100%;
+    height: 40vh;
+    background-image: url('../../img/selection.jpg');
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade 2s ease;
+
+    h1 {
+      margin-top: 0;
+      padding-top: 8%;
+      text-align: center;
+      color: #fdfffc;
+      font-size: 5rem;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  }
+
+  .selectionSecondDiv {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: space-between;
+    margin: auto;
+    animation: fade 2s ease;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    .card {
+      background-color: #011627;
+      margin: 4% 8% 4% 8%;
+
+      .cardHeader {
+        background-color: #011627;
+        padding: 5% 5% 1% 5%;
+
+        h4 {
+          color: #fdfffc;
+          font-size: 2rem;
+          margin-top: 2%;
+          margin-bottom: 2%;
+        }
+      }
+
+      .cardImg {
+        padding: 0%;
+        margin: 0%;
+        .cardMedia {
+          padding: 0%;
+          margin: 0%;
+          width: 100%;
+        }
+      }
+
+      .cardContent {
+        display: flex;
+        flex-direction: column;
+
+        .originSpan {
+          height: 20vh;
+          overflow-y: auto;
+          padding-bottom: 2%;
+
+          p {
+            margin: 2%;
+            color: #fdfffc;
+          }
+        }
+
+        .tasteSpan {
+          height: 20vh;
+          overflow-y: auto;
+          padding-top: 2%;
+          p {
+            margin: 2%;
+            color: #fdfffc;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1100px) {
+  .selection {
+    min-height: 100vh;
+
+    .selectionFirstDiv {
+      width: 100%;
+
+      h1 {
+        margin-top: 0;
+        padding-top: 15%;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: rgba(#011627, 0.2);
+      }
+    }
+
+    .selectionSecondDiv {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 5%;
+      justify-content: space-evenly;
+
+      .card {
+        margin: 2%;
+
+        .cardHeader {
+          h4 {
+            font-size: 1.4rem;
+          }
+        }
+
+        .cardImg {
+          .cardMedia {
+            width: 100%;
+            height: 30vh;
+          }
+        }
+
+        .cardContent {
+          .originSpan {
+            height: 20vh;
+          }
+
+          .tasteSpan {
+            height: 20vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .selection {
+    min-height: 100vh;
+
+    .selectionFirstDiv {
+      width: 100%;
+      height: 100vh;
+
+      h1 {
+        margin-top: 0;
+        padding-top: 50%;
+        font-size: 3rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: rgba(#011627, 0.2);
+      }
+    }
+
+    .selectionSecondDiv {
+      display: grid;
+      grid-template-columns: auto;
+      justify-content: center;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      .card {
+        border: 1px solid #011627;
+        background-color: #011627;
+        margin: 4% 0% 4% 0%;
+
+        .cardHeader {
+          h4 {
+            font-size: 1.3rem;
+          }
+        }
+
+        .cardImg {
+          .cardMedia {
+            width: 100%;
+            height: 35vh;
+          }
+        }
+
+        .cardContent {
+          display: flex;
+          flex-direction: column;
+
+          .originSpan {
+            height: 25vh;
+            padding-bottom: 1%;
+          }
+
+          .tasteSpan {
+            height: 25vh;
+            padding-top: 5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 2400px) {
+  .selection {
+    min-height: 100vh;
+
+    .selectionSecondDiv {
+      .card {
+        .cardHeader {
+          h4 {
+            font-size: 2.5rem;
+          }
+        }
+
+        .cardContent {
+          .originSpan {
+            height: 15vh;
+
+            p {
+              margin: 4%;
+              font-size: 1.3rem;
+            }
+          }
+
+          .tasteSpan {
+            height: 15vh;
+
+            p {
+              margin: 4%;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}

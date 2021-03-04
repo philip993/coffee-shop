@@ -52,7 +52,7 @@ const Homepage = () => {
             For our Customers, we choose only the finest selection of Coffee
             Beans.
           </p>
-          <Link className="link">
+          <Link to="/selection" className="link">
             View selection <FontAwesomeIcon icon={faLongArrowAltRight} />
           </Link>
         </span>
