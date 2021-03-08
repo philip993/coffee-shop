@@ -1,0 +1,101 @@
+.main {
+  min-height: 100vh;
+
+  .firstMainDiv {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+
+    .mainImage {
+      width: 55%;
+      height: 100vh;
+      background-image: url('../../img/contact.jpg');
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-size: cover;
+      animation: fade 2s ease;
+      color: #fdfffc;
+      padding-right: 15%;
+
+      .mainText {
+        padding-left: 2%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 10%;
+        // padding-top: 5%;
+
+        span {
+          display: flex;
+          flex-direction: column;
+
+          h1 {
+            margin: 0;
+            padding-left: 15%;
+            font-size: 3rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1100px) {
+  .main {
+    min-height: 100vh;
+
+    .firstMainDiv {
+      padding-left: 5%;
+      padding-right: 0%;
+
+      .mainImage {
+        padding-right: 5%;
+
+        .mainText {
+          padding-bottom: 40%;
+
+          span {
+            h1 {
+              padding-left: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .main {
+    min-height: 100vh;
+
+    .firstMainDiv {
+      display: flex;
+      width: 100%;
+      flex-direction: column-reverse;
+      padding-left: 0%;
+      padding-right: 0%;
+
+      .mainImage {
+        width: 90%;
+        height: 90vh;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        .mainText {
+          padding-left: 2%;
+          padding-bottom: 20%;
+
+          span {
+            h1 {
+              padding-left: 0%;
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

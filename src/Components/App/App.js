@@ -7,6 +7,8 @@ import Footer from '../Footer/Footer';
 import Profile from '../Profile/Profile';
 import Contact from '../Contact/Contact';
 import Selection from '../Selection/Selection';
+import Register from '../Register/Register';
+import Main from '../Main/Main';
 
 const App = () => {
   return (
@@ -16,7 +18,8 @@ const App = () => {
         <Route exact path="/menu" component={Menu} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/contact" component={Contact} />
-        <Route exact patch="/selection" component={Selection} />
+        <Route exact path="/selection" component={Selection} />
+        <Route exact path="/register" component={Main} />
       </Switch>
       <Footer />
     </div>

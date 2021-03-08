@@ -9,14 +9,22 @@ import ContactUs from '../../img/c2.png';
 import CoffeeBeans from '../../img/beans3.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from 'react-router-dom';
 
 const Homepage = () => {
+  const history = useHistory();
+
   return (
     <div className="homepage">
       <div className="homepageFirstDiv">
         <div className="homepageButtonContainer">
           <Button className="signInButton">Sign In</Button>
-          <Button className="signUpButton">Sign Up</Button>
+          <Button
+            className="signUpButton"
+            onClick={() => history.push('/register')}
+          >
+            Sign Up
+          </Button>
         </div>
 
         <h1>Coffee Shop</h1>
