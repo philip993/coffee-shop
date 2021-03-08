@@ -10,19 +10,30 @@ import CoffeeBeans from '../../img/beans3.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setRegisterForm, setLoginForm } from '../Main/MainActons';
 
 const Homepage = () => {
+  const dispatch = useDispatch();
   const history = useHistory();
+  const handleRegisterView = () => {
+    dispatch(setRegisterForm());
+    history.push('/register');
+  };
+
+  const handleLoginView = () => {
+    dispatch(setLoginForm());
+    history.push('/register');
+  };
 
   return (
     <div className="homepage">
       <div className="homepageFirstDiv">
         <div className="homepageButtonContainer">
-          <Button className="signInButton">Sign In</Button>
-          <Button
-            className="signUpButton"
-            onClick={() => history.push('/register')}
-          >
+          <Button className="signInButton" onClick={handleLoginView}>
+            Sign In
+          </Button>
+          <Button className="signUpButton" onClick={handleRegisterView}>
             Sign Up
           </Button>
         </div>
