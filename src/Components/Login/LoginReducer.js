@@ -1,8 +1,15 @@
-import { INPUT_LOGIN_EMAIL, INPUT_LOGIN_PASSWORD } from './LoginActionTypes';
+import {
+  INPUT_LOGIN_EMAIL,
+  INPUT_LOGIN_PASSWORD,
+  SUCCESS_LOGIN_REQUEST,
+  FAILURE_LOGIN_REQUEST,
+} from './LoginActionTypes';
 
 const initialState = {
   email: '',
   password: '',
+  user: null,
+  loginError: null,
 };
 
 export const LoginReducer = (state = initialState, action) => {
@@ -16,6 +23,22 @@ export const LoginReducer = (state = initialState, action) => {
       return {
         ...state,
         password: action.payload,
+      };
+    case SUCCESS_LOGIN_REQUEST:
+      return {
+        ...state,
+        user: action.payload,
+        loginError: false,
+        email: '',
+        password: '',
+      };
+    case FAILURE_LOGIN_REQUEST:
+      return {
+        ...state,
+        user: null,
+        loginError: true,
+        email: '',
+        password: '',
       };
     default:
       return state;

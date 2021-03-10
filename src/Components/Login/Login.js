@@ -2,7 +2,11 @@ import React from 'react';
 import './Login.scss';
 import { FormGroup, FormLabel, InputBase, Button } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
-import { inputLoginPassword, inputLoginEmail } from './LoginActions';
+import {
+  inputLoginPassword,
+  inputLoginEmail,
+  requestLogin,
+} from './LoginActions';
 
 const Login = () => {
   const { email, password } = useSelector((state) => ({
@@ -17,6 +21,11 @@ const Login = () => {
   const handleInputPassword = (e) => {
     dispatch(inputLoginPassword(e.target.value));
   };
+
+  const handleRequestLogin = (e) => {
+    dispatch(requestLogin());
+  };
+
   return (
     <div className="login">
       <div className="contactForm">
@@ -45,7 +54,9 @@ const Login = () => {
             />
           </FormGroup>
           <FormGroup className="formGroup">
-            <Button className="btn">Login</Button>
+            <Button onClick={handleRequestLogin} className="btn">
+              Login
+            </Button>
           </FormGroup>
         </form>
       </div>
