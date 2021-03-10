@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.scss';
-import { FormGroup, FormLabel, InputBase } from '@material-ui/core';
+import { FormGroup, FormLabel, InputBase, Button } from '@material-ui/core';
 
 const Login = () => {
   return (
@@ -22,6 +22,9 @@ const Login = () => {
               className="formInput"
               placeholder="Enter a valid password...."
             />
+          </FormGroup>
+          <FormGroup className="formGroup">
+            <Button className="btn">Login</Button>
           </FormGroup>
         </form>
       </div>
