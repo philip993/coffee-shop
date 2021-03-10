@@ -1,4 +1,168 @@
 .login {
   width: 45%;
   height: 90vh;
+
+  .contactForm {
+    height: 90vh;
+    animation: fade 2s ease;
+    padding-right: 4%;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+
+    .form {
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-top: 10%;
+
+      .formGroup {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        .formLabel {
+          border: 1px solid #7a7a7a;
+          padding-left: 4%;
+          background-color: #011627;
+          box-shadow: 0px 0px 2px #011627;
+          margin: 1px;
+
+          p {
+            font-weight: bold;
+            color: #fdfffc;
+          }
+        }
+
+        .formInput {
+          border: 1px solid #7a7a7a;
+          padding-left: 4%;
+          background-color: #fdfffc;
+          box-shadow: 0px 0px 2px #7a7a7a;
+          height: 50px;
+          margin: 1px;
+        }
+
+        .btn {
+          border: 1px solid #e71d36;
+          background-color: #e71d36;
+          color: #fdfffc;
+          font-weight: bold;
+          width: 40%;
+          margin: auto;
+          margin-top: 2%;
+          margin-bottom: 2%;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1100px) {
+  .login {
+    width: 45%;
+    height: 90vh;
+
+    .contactForm {
+      height: 90vh;
+      padding-right: 4%;
+
+      .form {
+        height: 90%;
+        padding-top: 5%;
+        margin-top: 10%;
+
+        .formGroup {
+          padding-top: 2%;
+          padding-bottom: 2%;
+
+          .formInput {
+            height: 50px;
+          }
+
+          .btn {
+            margin-top: 10%;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .login {
+    width: 100%;
+    min-height: 100vh;
+
+    .contactForm {
+      width: 90%;
+      min-height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 5%;
+      }
+
+      .form {
+        height: 90%;
+        padding-top: 5%;
+
+        .formGroup {
+          padding-top: 2%;
+          padding-bottom: 2%;
+
+          .formInput {
+            height: 50px;
+          }
+
+          .btn {
+            width: 70%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 2400px) {
+  .login {
+    width: 45%;
+    height: 90vh;
+
+    .contactForm {
+      height: 90vh;
+      padding-right: 4%;
+
+      h1 {
+        text-align: center;
+        font-size: 5rem;
+        margin-bottom: 0;
+        padding-top: 5%;
+      }
+
+      .form {
+        height: 90%;
+        width: 80%;
+        margin: auto;
+        padding-top: 5%;
+        margin-top: 5%;
+
+        .formGroup {
+          .btn {
+            margin-top: 5%;
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
 }
