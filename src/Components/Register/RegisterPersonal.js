@@ -1,15 +1,43 @@
 import React from 'react';
 import './RegisterStyle.scss';
 import { FormGroup, FormLabel, InputBase, Button } from '@material-ui/core';
-import { useDispatch } from 'react-redux';
-import { setRegisterFirstPage } from './RegisterActions';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  setRegisterFirstPage,
+  inputRegisterEmail,
+  inputRegisterFullname,
+  inputRegisterPassword,
+  inputRegisterRepeatPassword,
+} from './RegisterActions';
 
 const RegisterPersonal = () => {
+  const { regFullName, regEmail, regPassword, regRepeatPassword } = useSelector(
+    (state) => ({
+      ...state.RegisterReducer,
+    })
+  );
   const dispatch = useDispatch();
 
   const handleNextPage = () => {
     dispatch(setRegisterFirstPage());
   };
+
+  const handleInputFullname = (e) => {
+    dispatch(inputRegisterFullname(e.target.value));
+  };
+
+  const handleInputEmail = (e) => {
+    dispatch(inputRegisterEmail(e.target.value));
+  };
+
+  const handleInputPassword = (e) => {
+    dispatch(inputRegisterPassword(e.target.value));
+  };
+
+  const handleInputRepeatPassword = (e) => {
+    dispatch(inputRegisterRepeatPassword(e.target.value));
+  };
+
   return (
     <div className="contactForm">
       <h1>Register</h1>
@@ -18,13 +46,23 @@ const RegisterPersonal = () => {
           <FormLabel className="formLabel">
             <p>Full Name *</p>
           </FormLabel>
-          <InputBase className="formInput" placeholder="e.g. John Doe" />
+          <InputBase
+            className="formInput"
+            placeholder="e.g. John Doe"
+            value={regFullName}
+            onChange={handleInputFullname}
+          />
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
             <p>Email *</p>
           </FormLabel>
-          <InputBase className="formInput" placeholder="e.g. john@john.com" />
+          <InputBase
+            className="formInput"
+            placeholder="e.g. john@john.com"
+            value={regPassword}
+            onChange={handleInputPassword}
+          />
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
@@ -33,13 +71,20 @@ const RegisterPersonal = () => {
           <InputBase
             className="formInput"
             placeholder="Must be at least 4 characters.."
+            value={regEmail}
+            onChange={handleInputEmail}
           />
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
             <p>Repeat Password *</p>
           </FormLabel>
-          <InputBase className="formInput" placeholder="e.g. +100 555 1111" />
+          <InputBase
+            className="formInput"
+            placeholder="e.g. +100 555 1111"
+            value={regRepeatPassword}
+            onChange={handleInputRepeatPassword}
+          />
         </FormGroup>
         <FormGroup className="formGroup">
           <Button onClick={handleNextPage} className="btn">
