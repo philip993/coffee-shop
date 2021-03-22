@@ -9,6 +9,8 @@ import {
   INPUT_REGISTER_CITY,
   INPUT_REGISTER_CARD,
   INPUT_REGISTER_PHONE,
+  SUCCESS_REQUEST_REGISTER,
+  FAILURE_REQUEST_REGISTER,
 } from './RegisterActionTypes';
 
 const initialState = {
@@ -21,10 +23,40 @@ const initialState = {
   regCity: '',
   regCard: '',
   regPhone: '',
+  regUser: null,
+  regError: null,
 };
 
 export const RegisterReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SUCCESS_REQUEST_REGISTER:
+      return {
+        ...state,
+        regUser: action.payload,
+        regError: false,
+        regFullName: '',
+        regEmail: '',
+        regPassword: '',
+        regRepeatPassword: '',
+        regAddress: '',
+        regCity: '',
+        regCard: '',
+        regPhone: '',
+      };
+    case FAILURE_REQUEST_REGISTER:
+      return {
+        ...state,
+        regUser: null,
+        regError: true,
+        regFullName: '',
+        regEmail: '',
+        regPassword: '',
+        regRepeatPassword: '',
+        regAddress: '',
+        regCity: '',
+        regCard: '',
+        regPhone: '',
+      };
     case SET_REGISTER_NEXT_PAGE:
       return {
         ...state,
