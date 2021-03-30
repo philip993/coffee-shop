@@ -48,10 +48,7 @@ const RegisterInfo = () => {
   return (
     <div className="contactForm">
       <h1>Register</h1>
-      <form
-        className="form"
-        // onSubmit={handleSubmit(handleRegistration)}
-      >
+      <form className="form">
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
             <p>Address *</p>
@@ -67,10 +64,10 @@ const RegisterInfo = () => {
                 value={regAddress}
                 onChange={handleInputAddress}
                 inputRef={register({
-                  required: 'This field is required',
+                  required: 'This field is required!',
                   minLength: {
                     value: 4,
-                    message: 'Must be at leat 4 characters',
+                    message: 'Must be at leat four characters',
                   },
                 })}
               />
@@ -84,34 +81,83 @@ const RegisterInfo = () => {
           <FormLabel className="formLabel">
             <p>City *</p>
           </FormLabel>
-          <InputBase
-            className="formInput"
-            placeholder="e.g. New York"
-            value={regCity}
-            onChange={handleInputCity}
+          <Controller
+            name="regCity"
+            control={control}
+            render={({ onChange, value, name, message }) => (
+              <InputBase
+                className="formInput"
+                name="regCity"
+                placeholder="e.g. New York"
+                value={regCity}
+                onChange={handleInputCity}
+                inputRef={register({
+                  required: 'This field is required!',
+                  minLength: {
+                    value: 4,
+                    message: 'Must be at leat four characters',
+                  },
+                })}
+              />
+            )}
           />
+          <FormHelperText className="formHelperText" error>
+            {errors.regCity && errors.regCity.message}
+          </FormHelperText>
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
             <p>Card *</p>
           </FormLabel>
-          <InputBase
-            className="formInput"
-            placeholder="Last Four Numbers...."
-            value={regCard}
-            onChange={handleInputCard}
+          <Controller
+            name="regCard"
+            control={control}
+            render={({ onChange, value, name, message }) => (
+              <InputBase
+                className="formInput"
+                placeholder="Last Four Numbers...."
+                value={regCard}
+                onChange={handleInputCard}
+                inputRef={register({
+                  required: 'This field is required!',
+                  minLength: {
+                    value: 4,
+                    message: 'Must be four characters!',
+                  },
+                  maxLength: {
+                    value: 4,
+                    message: 'Must be four characters!',
+                  },
+                })}
+              />
+            )}
           />
+          <FormHelperText className="formHelperText" error>
+            {errors.regCard && errors.regCard.message}
+          </FormHelperText>
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
             <p>Phone *</p>
           </FormLabel>
-          <InputBase
-            className="formInput"
-            placeholder="e.g. +100 555 1111"
-            value={regPhone}
-            onChange={handleInputPhone}
+          <Controller
+            name="regPhone"
+            control={control}
+            render={({ onChange, value, name, message }) => (
+              <InputBase
+                className="formInput"
+                placeholder="e.g. +100 555 1111"
+                value={regPhone}
+                onChange={handleInputPhone}
+                inputRef={register({
+                  required: 'This field is required!',
+                })}
+              />
+            )}
           />
+          <FormHelperText className="formHelperText" error>
+            {errors.regPhone && errors.regPhone.message}
+          </FormHelperText>
         </FormGroup>
         <FormGroup className="formGroup">
           <Button

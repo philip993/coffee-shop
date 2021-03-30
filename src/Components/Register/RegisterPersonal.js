@@ -65,10 +65,10 @@ const RegisterPersonal = () => {
                 value={regFullName}
                 onChange={handleInputFullname}
                 inputRef={register({
-                  required: 'This field is required',
+                  required: 'This field is required!',
                   minLength: {
-                    value: 4,
-                    message: 'Must be at leat 4 characters',
+                    value: 2,
+                    message: 'Must be at leat two characters',
                   },
                 })}
               />
@@ -82,34 +82,84 @@ const RegisterPersonal = () => {
           <FormLabel className="formLabel">
             <p>Email *</p>
           </FormLabel>
-          <InputBase
-            className="formInput"
-            placeholder="e.g. john@john.com"
-            value={regPassword}
-            onChange={handleInputPassword}
+          <Controller
+            name="regEmail"
+            control={control}
+            render={({ onChange, value, name, message }) => (
+              <InputBase
+                className="formInput"
+                name="regEmail"
+                placeholder="e.g. john@john.com"
+                value={regEmail}
+                onChange={handleInputEmail}
+                inputRef={register({
+                  required: 'This field is required!',
+                  pattern: {
+                    value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                    message: 'Enter a valid E-Mail Address',
+                  },
+                })}
+              />
+            )}
           />
+          <FormHelperText className="formHelperText" error>
+            {errors.regEmail && errors.regEmail.message}
+          </FormHelperText>
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
             <p>Password *</p>
           </FormLabel>
-          <InputBase
-            className="formInput"
-            placeholder="Must be at least 4 characters.."
-            value={regEmail}
-            onChange={handleInputEmail}
+          <Controller
+            name="regPassword"
+            control={control}
+            render={({ onChange, value, message, name }) => (
+              <InputBase
+                className="formInput"
+                name="regPassword"
+                placeholder="Enter your password.."
+                value={regPassword}
+                onChange={handleInputPassword}
+                inputRef={register({
+                  required: 'This field is required!',
+                  pattern: {
+                    value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
+                    message:
+                      'Password must be at least eight characters, including uppercase and lower case letter and a number.',
+                  },
+                })}
+              />
+            )}
           />
+          <FormHelperText className="formHelperText" error>
+            {errors.regPassword && errors.regPassword.message}
+          </FormHelperText>
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
             <p>Repeat Password *</p>
           </FormLabel>
-          <InputBase
-            className="formInput"
-            placeholder="e.g. +100 555 1111"
-            value={regRepeatPassword}
-            onChange={handleInputRepeatPassword}
+          <Controller
+            name="regRepeatPassword"
+            control={control}
+            render={({ onChange, value, message, name }) => (
+              <InputBase
+                className="formInput"
+                name="regRepeatPassword"
+                placeholder="Repeat your password.."
+                value={regRepeatPassword}
+                onChange={handleInputRepeatPassword}
+                inputRef={register({
+                  required: 'This Field is required!',
+                  validate: (value) =>
+                    value === regPassword || 'Password does not match!',
+                })}
+              />
+            )}
           />
+          <FormHelperText className="formHelperText" error>
+            {errors.regRepeatPassword && errors.regRepeatPassword.message}
+          </FormHelperText>
         </FormGroup>
         <FormGroup className="formGroup">
           <Button onClick={handleSubmit(handleNextPage)} className="btn">
