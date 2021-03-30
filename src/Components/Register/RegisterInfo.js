@@ -1,6 +1,12 @@
 import React from 'react';
 import './RegisterStyle.scss';
-import { FormGroup, FormLabel, InputBase, Button } from '@material-ui/core';
+import {
+  FormGroup,
+  FormLabel,
+  InputBase,
+  Button,
+  FormHelperText,
+} from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   inputRegisterAddress,
@@ -9,12 +15,14 @@ import {
   inputRegisterPhone,
   requestRegister,
 } from './RegisterActions';
+import { Controller, useForm } from 'react-hook-form';
 
 const RegisterInfo = () => {
   const { regAddress, regCity, regCard, regPhone } = useSelector((state) => ({
     ...state.RegisterReducer,
   }));
   const dispatch = useDispatch();
+  const { register, handleSubmit, errors, message, control } = useForm();
 
   const handleInputAddress = (e) => {
     dispatch(inputRegisterAddress(e.target.value));
@@ -34,22 +42,43 @@ const RegisterInfo = () => {
 
   const handleRegistration = () => {
     dispatch(requestRegister());
+    console.log('register');
   };
 
   return (
     <div className="contactForm">
       <h1>Register</h1>
-      <form className="form">
+      <form
+        className="form"
+        // onSubmit={handleSubmit(handleRegistration)}
+      >
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
             <p>Address *</p>
           </FormLabel>
-          <InputBase
-            className="formInput"
-            placeholder="e.g. 5th Avenue"
-            value={regAddress}
-            onChange={handleInputAddress}
+          <Controller
+            control={control}
+            name="regAddress"
+            render={({ onChange, value, name, message }) => (
+              <InputBase
+                className="formInput"
+                name="regAddress"
+                placeholder="e.g. 5th Avenue"
+                value={regAddress}
+                onChange={handleInputAddress}
+                inputRef={register({
+                  required: 'This field is required',
+                  minLength: {
+                    value: 4,
+                    message: 'Must be at leat 4 characters',
+                  },
+                })}
+              />
+            )}
           />
+          <FormHelperText className="formHelperText" error>
+            {errors.regAddress && errors.regAddress.message}
+          </FormHelperText>
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
@@ -85,7 +114,11 @@ const RegisterInfo = () => {
           />
         </FormGroup>
         <FormGroup className="formGroup">
-          <Button className="btn" onClick={handleRegistration}>
+          <Button
+            className="btn"
+            type="submit"
+            onClick={handleSubmit(handleRegistration)}
+          >
             Register
           </Button>
         </FormGroup>

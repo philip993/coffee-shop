@@ -1,6 +1,12 @@
 import React from 'react';
 import './RegisterStyle.scss';
-import { FormGroup, FormLabel, InputBase, Button } from '@material-ui/core';
+import {
+  FormGroup,
+  FormLabel,
+  InputBase,
+  Button,
+  FormHelperText,
+} from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   setRegisterFirstPage,
@@ -9,6 +15,7 @@ import {
   inputRegisterPassword,
   inputRegisterRepeatPassword,
 } from './RegisterActions';
+import { Controller, useForm } from 'react-hook-form';
 
 const RegisterPersonal = () => {
   const { regFullName, regEmail, regPassword, regRepeatPassword } = useSelector(
@@ -17,6 +24,7 @@ const RegisterPersonal = () => {
     })
   );
   const dispatch = useDispatch();
+  const { register, handleSubmit, errors, message, control } = useForm();
 
   const handleNextPage = () => {
     dispatch(setRegisterFirstPage());
@@ -46,12 +54,29 @@ const RegisterPersonal = () => {
           <FormLabel className="formLabel">
             <p>Full Name *</p>
           </FormLabel>
-          <InputBase
-            className="formInput"
-            placeholder="e.g. John Doe"
-            value={regFullName}
-            onChange={handleInputFullname}
+          <Controller
+            name="regFullname"
+            control={control}
+            render={({ onChange, value, name, message }) => (
+              <InputBase
+                className="formInput"
+                name="regFullname"
+                placeholder="e.g. John Doe"
+                value={regFullName}
+                onChange={handleInputFullname}
+                inputRef={register({
+                  required: 'This field is required',
+                  minLength: {
+                    value: 4,
+                    message: 'Must be at leat 4 characters',
+                  },
+                })}
+              />
+            )}
           />
+          <FormHelperText className="formHelperText" error>
+            {errors.regFullname && errors.regFullname.message}
+          </FormHelperText>
         </FormGroup>
         <FormGroup className="formGroup">
           <FormLabel className="formLabel">
@@ -87,7 +112,7 @@ const RegisterPersonal = () => {
           />
         </FormGroup>
         <FormGroup className="formGroup">
-          <Button onClick={handleNextPage} className="btn">
+          <Button onClick={handleSubmit(handleNextPage)} className="btn">
             Next
           </Button>
         </FormGroup>
