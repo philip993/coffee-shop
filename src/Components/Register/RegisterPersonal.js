@@ -40,8 +40,6 @@ const RegisterPersonal = () => {
 
   const handleInputFullname = (e) => {
     dispatch(inputRegisterFullname(e.target.value));
-    console.log(e);
-    console.log(e.target.value);
   };
 
   const handleInputEmail = (e) => {
