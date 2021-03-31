@@ -24,7 +24,15 @@ const RegisterPersonal = () => {
     })
   );
   const dispatch = useDispatch();
-  const { register, handleSubmit, errors, message, control } = useForm();
+  const { register, handleSubmit, errors, message, control } = useForm({
+    reValidateMode: 'onBlur',
+    defaultValues: {},
+    resolver: undefined,
+    context: undefined,
+    criteriaMode: 'firstError',
+    shouldFocusError: true,
+    shouldUnregister: true,
+  });
 
   const handleNextPage = () => {
     dispatch(setRegisterFirstPage());
@@ -32,6 +40,8 @@ const RegisterPersonal = () => {
 
   const handleInputFullname = (e) => {
     dispatch(inputRegisterFullname(e.target.value));
+    console.log(e);
+    console.log(e.target.value);
   };
 
   const handleInputEmail = (e) => {
@@ -67,8 +77,8 @@ const RegisterPersonal = () => {
                 inputRef={register({
                   required: 'This field is required!',
                   minLength: {
-                    value: 2,
-                    message: 'Must be at leat two characters',
+                    value: 4,
+                    message: 'Must be at leat four characters',
                   },
                 })}
               />
@@ -118,6 +128,7 @@ const RegisterPersonal = () => {
                 className="formInput"
                 name="regPassword"
                 placeholder="Enter your password.."
+                type="password"
                 value={regPassword}
                 onChange={handleInputPassword}
                 inputRef={register({
@@ -146,6 +157,7 @@ const RegisterPersonal = () => {
               <InputBase
                 className="formInput"
                 name="regRepeatPassword"
+                type="password"
                 placeholder="Repeat your password.."
                 value={regRepeatPassword}
                 onChange={handleInputRepeatPassword}

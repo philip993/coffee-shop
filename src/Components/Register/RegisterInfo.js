@@ -22,7 +22,15 @@ const RegisterInfo = () => {
     ...state.RegisterReducer,
   }));
   const dispatch = useDispatch();
-  const { register, handleSubmit, errors, message, control } = useForm();
+  const { register, handleSubmit, errors, message, control } = useForm({
+    reValidateMode: 'onBlur',
+    defaultValues: {},
+    resolver: undefined,
+    context: undefined,
+    criteriaMode: 'firstError',
+    shouldFocusError: true,
+    shouldUnregister: true,
+  });
 
   const handleInputAddress = (e) => {
     dispatch(inputRegisterAddress(e.target.value));
@@ -115,6 +123,7 @@ const RegisterInfo = () => {
             render={({ onChange, value, name, message }) => (
               <InputBase
                 className="formInput"
+                name="regCard"
                 placeholder="Last Four Numbers...."
                 value={regCard}
                 onChange={handleInputCard}
@@ -146,6 +155,7 @@ const RegisterInfo = () => {
             render={({ onChange, value, name, message }) => (
               <InputBase
                 className="formInput"
+                name="regPhone"
                 placeholder="e.g. +100 555 1111"
                 value={regPhone}
                 onChange={handleInputPhone}
