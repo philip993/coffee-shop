@@ -22,9 +22,30 @@
       .cartItem {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        border: 1px solid #011627;
+        background-color: #011627;
+        color: #fdfffc;
+        margin-top: 2%;
+
         .itemImage {
-          width: 100px;
-          height: 100px;
+          width: 150px;
+          height: 150px;
+          padding-left: 10%;
+          border: 1px solid #011627;
+        }
+
+        .info {
+          border: 1px solid #011627;
+        }
+
+        .total {
+          text-align: center;
+          border: 1px solid #011627;
+
+          h4 {
+            font-weight: bold;
+            color: #ff9f1c;
+          }
         }
       }
     }
@@ -34,10 +55,23 @@
       height: 80vh;
       border: 1px solid #011627;
 
+      margin-left: 2%;
+
       .summaryAmount {
+        background-color: #011627;
+        color: #fdfffc;
+        height: 50%;
         span {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
+
+          h4 {
+            padding-left: 5%;
+          }
+
+          .amount {
+            text-align: center;
+          }
         }
       }
       h1 {

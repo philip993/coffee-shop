@@ -12,34 +12,54 @@ const Cart = () => {
       </div>
       <div className="cartSecondDiv">
         <div className="cartItems">
-          <h1>Items</h1>
           <div className="cartItem">
             <img className="itemImage" src={EspressoImg} alt="espresso" />
-            <span>
+            <span className="info">
               <h4>Espresso</h4>
-              <h4>2 * $2.00</h4>
+              <h4>Quantity: 2</h4>
+              <h4>Price: $2.00</h4>
             </span>
-            <h4>$4.00</h4>
+            <span className="total">
+              <h4>$4.00</h4>
+            </span>
+          </div>
+          <div className="cartItem">
+            <img className="itemImage" src={EspressoImg} alt="espresso" />
+            <span className="info">
+              <h4>Americano</h4>
+              <h4>Quantity: 2</h4>
+              <h4>Price: $2.00</h4>
+            </span>
+            <span className="total">
+              <h4>$4.00</h4>
+            </span>
+          </div>
+          <div className="cartItem">
+            <img className="itemImage" src={EspressoImg} alt="espresso" />
+            <span className="info">
+              <h4>Decaf</h4>
+              <h4>Quantity: 1</h4>
+              <h4>Price: $2.00</h4>
+            </span>
+            <span className="total">
+              <h4>$2.00</h4>
+            </span>
           </div>
         </div>
         <div className="cartSummary">
-          <h1 className="summaryTitle">Cart Summary</h1>
           <div className="summaryAmount">
             <span>
               <h4>Subtotal</h4>
-              <h4>$10.00</h4>
+              <h4 className="amount">$10.00</h4>
             </span>
             <span>
               <h4>Discount</h4>
-              <h4>-$2.00</h4>
+              <h4 className="amount">-$2.00</h4>
             </span>
             <span>
               <h4>Total</h4>
-              <h4>$8.00</h4>
+              <h4 className="amount">$8.00</h4>
             </span>
-            {/* <h4>Subtotal: $10.00</h4>
-            <h4>Discount: -$2.00</h4>
-            <h4>Total: $8.00</h4> */}
           </div>
         </div>
       </div>
