@@ -23,7 +23,7 @@ const Cart = () => {
               <h4>$4.00</h4>
             </span>
           </div>
-          <div className="cartItem">
+          {/* <div className="cartItem">
             <img className="itemImage" src={EspressoImg} alt="espresso" />
             <span className="info">
               <h4 className="name">Americano</h4>
@@ -44,13 +44,13 @@ const Cart = () => {
             <span className="total">
               <h4>$2.00</h4>
             </span>
-          </div>
+          </div> */}
         </div>
         <div className="cartSummary">
           <div className="summaryAmount">
-            <span className="title">
+            <div className="title">
               <h4>Cart Summary</h4>
-            </span>
+            </div>
             <span>
               <h4>Subtotal</h4>
               <h4 className="amount">$10.00</h4>
