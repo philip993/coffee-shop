@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './NavbarStyle.scss';
 import { Link } from 'react-router-dom';
-import { Drawer, ListItem, Button } from '@material-ui/core';
+import { Drawer, ListItem, Button, Badge } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShoppingCart,
@@ -28,7 +28,9 @@ const Navbar = () => {
           <FontAwesomeIcon className="icon" icon={faUserCircle} />
         </Button>
         <Button className="btn">
-          <FontAwesomeIcon className="icon" icon={faShoppingCart} />
+          <Badge badgeContent={5} color="secondary">
+            <FontAwesomeIcon className="icon" icon={faShoppingCart} />
+          </Badge>
         </Button>
       </div>
 
