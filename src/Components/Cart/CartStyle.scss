@@ -7,6 +7,7 @@
     color: #011627;
     font-size: 1.2rem;
     font-weight: bold;
+    animation: fade 2s ease;
   }
 
   .cartSecondDiv {
@@ -14,6 +15,7 @@
     padding-right: 15%;
     display: flex;
     flex-direction: row;
+    animation: fade 2s ease;
 
     .cartItems {
       width: 60%;
@@ -283,4 +285,13 @@
 }
 
 @media all and (min-width: 2400px) {
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
