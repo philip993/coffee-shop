@@ -2,8 +2,14 @@ import React from 'react';
 import './CartStyle.scss';
 import Navbar from '../Navbar/Navbar';
 import EspressoImg from '../../img/espresso.jpg';
+import { Button } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = () => {
+  const handleRemoveItem = (e) => {
+    console.log('removed');
+  };
   return (
     <div className="cart">
       <Navbar />
@@ -16,10 +22,18 @@ const Cart = () => {
             <img className="itemImage" src={EspressoImg} alt="espresso" />
             <span className="info">
               <h4 className="name">Espresso</h4>
-              <h4 className="quantity">Quantity: 2</h4>
-              <h4 className="price">Price: $2.00</h4>
+              <h4 className="name"></h4>
+              <h4 className="quantity">Quantity</h4>
+              <h4 className="quantityVal">2</h4>
+              <h4 className="price">Price</h4>
+              <h4 className="quantityVal">$2.00</h4>
             </span>
             <span className="total">
+              <FontAwesomeIcon
+                className="remove"
+                icon={faTimesCircle}
+                onClick={handleRemoveItem}
+              />
               <h4>$4.00</h4>
             </span>
           </div>
@@ -27,10 +41,18 @@ const Cart = () => {
             <img className="itemImage" src={EspressoImg} alt="espresso" />
             <span className="info">
               <h4 className="name">Americano</h4>
-              <h4 className="quantity">Quantity: 2</h4>
-              <h4 className="price">Price: $2.00</h4>
+              <h4 className="name"></h4>
+              <h4 className="quantity">Quantity</h4>
+              <h4 className="quantityVal">2</h4>
+              <h4 className="price">Price</h4>
+              <h4 className="quantityVal">$2.00</h4>
             </span>
             <span className="total">
+              <FontAwesomeIcon
+                className="remove"
+                icon={faTimesCircle}
+                onClick={handleRemoveItem}
+              />
               <h4>$4.00</h4>
             </span>
           </div>
@@ -38,10 +60,18 @@ const Cart = () => {
             <img className="itemImage" src={EspressoImg} alt="espresso" />
             <span className="info">
               <h4 className="name">Decaf</h4>
-              <h4 className="quantity">Quantity: 1</h4>
-              <h4 className="price">Price: $2.00</h4>
+              <h4 className="name"></h4>
+              <h4 className="quantity">Quantity</h4>
+              <h4 className="quantityVal">1</h4>
+              <h4 className="price">Price</h4>
+              <h4 className="quantityVal">$2.00</h4>
             </span>
             <span className="total">
+              <FontAwesomeIcon
+                className="remove"
+                icon={faTimesCircle}
+                onClick={handleRemoveItem}
+              />
               <h4>$2.00</h4>
             </span>
           </div>
