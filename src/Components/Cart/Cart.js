@@ -1,14 +1,20 @@
 import React from 'react';
 import './CartStyle.scss';
+import { useSelector, useDispatch } from 'react-redux';
 import Navbar from '../Navbar/Navbar';
 import EspressoImg from '../../img/espresso.jpg';
-import { Button } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { requestRemoveCartItem } from './CartActions';
 
 const Cart = () => {
+  const { cartItems } = useSelector((state) => ({
+    ...state.CartReducer,
+  }));
+  const dispatch = useDispatch();
   const handleRemoveItem = (e) => {
     console.log('removed');
+    dispatch(requestRemoveCartItem());
   };
   return (
     <div className="cart">
