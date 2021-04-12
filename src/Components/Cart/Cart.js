@@ -1,21 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './CartStyle.scss';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  requestRemoveCartItem,
+  requestClearCart,
+  requestGetCartItems,
+} from './CartActions';
 import Navbar from '../Navbar/Navbar';
 import EspressoImg from '../../img/espresso.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { requestRemoveCartItem } from './CartActions';
+import {
+  faTimesCircle,
+  faTrashAlt,
+  faCreditCard,
+} from '@fortawesome/free-solid-svg-icons';
+import { Button } from '@material-ui/core';
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => ({
     ...state.CartReducer,
   }));
   const dispatch = useDispatch();
+  const history = useHistory();
+
   const handleRemoveItem = (e) => {
     console.log('removed');
     dispatch(requestRemoveCartItem());
   };
+
+  const handleClearCart = () => {
+    console.log('cart cleared!');
+    dispatch(requestClearCart());
+  };
+
+  const handleRedirectToCheckout = () => {
+    console.log('redirect to checkout page');
+    history.push('/#');
+  };
+
+  // useEffect(() => {
+  //   dispatch(requestGetCartItems());
+  // }, []);
+
   return (
     <div className="cart">
       <Navbar />
@@ -81,6 +108,12 @@ const Cart = () => {
               <h4>$2.00</h4>
             </span>
           </div>
+          <span className="clear">
+            <Button onClick={handleClearCart} className="clearBtn">
+              Clear
+              <FontAwesomeIcon className="icon" icon={faTrashAlt} />
+            </Button>
+          </span>
         </div>
         <div className="cartSummary">
           <div className="summaryAmount">
@@ -99,6 +132,12 @@ const Cart = () => {
               <h4>Total</h4>
               <h4 className="totalAmount">$8.00</h4>
             </span>
+          </div>
+          <div className="btnActions">
+            <Button onClick={handleRedirectToCheckout} className="checkBtn">
+              Checkout
+              <FontAwesomeIcon className="icon" icon={faCreditCard} />
+            </Button>
           </div>
         </div>
       </div>
