@@ -3,6 +3,8 @@ import {
   FAILURE_REMOVE_ITEM_FROM_CART,
   SUCCESS_CLEAR_CART,
   FAILURE_CLEAR_CART,
+  SUCCESS_GET_CART_ITEMS,
+  FAILURE_GET_CART_ITEMS,
 } from './CartActionTypes';
 import axios from 'axios';
 
@@ -45,6 +47,27 @@ export const requestClearCart = () => {
         console.log(error);
         dispatch({
           type: FAILURE_CLEAR_CART,
+        });
+      });
+  };
+};
+
+export const requestGetCartItems = () => {
+  return (dispatch, getState) => {
+    let currentUser;
+    return axios
+      .get(`http://localhost:3000/#/${currentUser}`)
+      .then((response) => {
+        console.log(response);
+        dispatch({
+          type: SUCCESS_GET_CART_ITEMS,
+          payload: response.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        dispatch({
+          type: FAILURE_GET_CART_ITEMS,
         });
       });
   };
