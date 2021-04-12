@@ -34,6 +34,21 @@
       display: flex;
       flex-direction: column;
       margin-top: 5%;
+
+      .clear {
+        text-align: center;
+        padding-bottom: 5%;
+        .clearBtn {
+          color: #fdfffc;
+          background-color: #e71d36;
+          width: 30%;
+          margin: 1%;
+
+          .icon {
+            padding-left: 5%;
+          }
+        }
+      }
       .cartItem {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -109,7 +124,7 @@
         background-color: #011627;
         border: 1px solid #011627;
         color: #fdfffc;
-        height: 45%;
+        height: 40%;
 
         .title {
           padding-bottom: 2%;
@@ -139,13 +154,32 @@
           }
         }
         .total {
-          padding-top: 5%;
           margin: auto;
           font-size: 1.2rem;
           .totalAmount {
             text-align: center;
             font-weight: bold;
             color: #ff9f1c;
+          }
+        }
+      }
+      .btnActions {
+        background-color: #011627;
+        margin: auto;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-weight: bold;
+        margin-top: -1%;
+        border: 1px solid #011627;
+        .checkBtn {
+          color: #fdfffc;
+          background-color: #00ab66;
+          width: 40%;
+          margin: 1%;
+
+          .icon {
+            padding-left: 5%;
           }
         }
       }
@@ -177,6 +211,13 @@
         width: 60%;
         height: auto;
         border: none;
+
+        .clear {
+          .clearBtn {
+            width: 40%;
+            margin: 1%;
+          }
+        }
 
         .cartItem {
           display: grid;
@@ -218,7 +259,7 @@
         margin-left: 2%;
 
         .summaryAmount {
-          height: 40%;
+          height: 35%;
 
           .title {
             padding-bottom: 5%;
@@ -227,8 +268,15 @@
           span {
             width: 70%;
           }
-          .total {
-            padding-top: 10%;
+        }
+        .btnActions {
+          .checkBtn {
+            width: 50%;
+            margin: 1%;
+
+            .icon {
+              padding-left: 5%;
+            }
           }
         }
       }
@@ -267,6 +315,14 @@
         height: auto;
         display: flex;
         flex-direction: column;
+
+        .clear {
+          .clearBtn {
+            width: 70%;
+            margin: 1% auto 5% auto;
+          }
+        }
+
         .cartItem {
           display: grid;
           grid-template-columns: auto;
@@ -332,7 +388,7 @@
           background-color: #011627;
           border: 1px solid #011627;
           color: #fdfffc;
-          height: 80%;
+          height: auto;
 
           .title {
             padding-bottom: 2%;
@@ -362,13 +418,27 @@
             }
           }
           .total {
-            padding-top: 5%;
             margin: auto;
             font-size: 1.2rem;
             .totalAmount {
               text-align: center;
               font-weight: bold;
               color: #ff9f1c;
+            }
+          }
+        }
+
+        .btnActions {
+          padding-top: 5%;
+          padding-bottom: 5%;
+
+          border: 1px solid #011627;
+          .checkBtn {
+            width: 70%;
+            margin: 1%;
+
+            .icon {
+              padding-left: 5%;
             }
           }
         }
@@ -384,8 +454,22 @@
     .cartSecondDiv {
       .cartItems {
         width: 50%;
+
+        .clear {
+          text-align: center;
+          .clearBtn {
+            color: #fdfffc;
+            background-color: #e71d36;
+            width: 25%;
+            margin: 1%;
+
+            .icon {
+              padding-left: 5%;
+            }
+          }
+        }
         .cartItem {
-          margin-bottom: 2%;
+          margin-bottom: 3%;
 
           .itemImage {
             width: 200px;
@@ -432,6 +516,19 @@
           }
           .total {
             font-size: 1.3rem;
+          }
+        }
+        .btnActions {
+          padding-top: 5%;
+          padding-bottom: 5%;
+          margin-top: -1%;
+          .checkBtn {
+            width: 35%;
+            margin: 1%;
+
+            .icon {
+              padding-left: 5%;
+            }
           }
         }
       }
