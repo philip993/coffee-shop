@@ -17,11 +17,6 @@
       .icon {
         width: 25px;
         height: 25px;
-
-        &:hover {
-          color: #2ec4b6;
-          transition: 300ms ease-in;
-        }
       }
     }
   }
@@ -35,11 +30,6 @@
       .icon {
         width: 25px;
         height: 25px;
-
-        &:hover {
-          color: #2ec4b6;
-          transition: 300ms ease-in;
-        }
       }
     }
   }
@@ -57,7 +47,6 @@
     margin-top: 5%;
   }
   .listItem {
-    background-color: #fdfffc;
     width: 100%;
     padding: 0%;
     margin-top: 4%;
