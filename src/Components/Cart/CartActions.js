@@ -5,6 +5,7 @@ import {
   FAILURE_CLEAR_CART,
   SUCCESS_GET_CART_ITEMS,
   FAILURE_GET_CART_ITEMS,
+  COUNT_NUMBER_OF_ITEMS_IN_CART,
 } from './CartActionTypes';
 import axios from 'axios';
 
@@ -70,5 +71,11 @@ export const requestGetCartItems = () => {
           type: FAILURE_GET_CART_ITEMS,
         });
       });
+  };
+};
+
+export const countItemsInCart = () => {
+  return {
+    type: COUNT_NUMBER_OF_ITEMS_IN_CART,
   };
 };
