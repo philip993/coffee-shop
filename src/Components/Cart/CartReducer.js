@@ -5,11 +5,13 @@ import {
   FAILURE_REMOVE_ITEM_FROM_CART,
   SUCCESS_GET_CART_ITEMS,
   FAILURE_GET_CART_ITEMS,
+  COUNT_NUMBER_OF_ITEMS_IN_CART,
 } from './CartActionTypes';
 
 const initialState = {
   cartItems: [],
   cartError: null,
+  cartItemsNo: 0,
 };
 
 export const CartReducer = (state = initialState, action) => {
@@ -49,6 +51,11 @@ export const CartReducer = (state = initialState, action) => {
       return {
         ...state,
         cartError: true,
+      };
+    case COUNT_NUMBER_OF_ITEMS_IN_CART:
+      return {
+        ...state,
+        cartItemsNo: state.cartItems.length,
       };
     default:
       return state;
