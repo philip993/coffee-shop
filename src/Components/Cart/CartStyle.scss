@@ -38,11 +38,17 @@
       .clear {
         text-align: center;
         padding-bottom: 5%;
+        padding-top: 2%;
         .clearBtn {
           color: #fdfffc;
           background-color: #e71d36;
           width: 30%;
           margin: 1%;
+          font-weight: bold;
+
+          &:hover {
+            background-color: #ca152a;
+          }
 
           .icon {
             padding-left: 5%;
@@ -171,7 +177,6 @@
         text-align: center;
         padding-top: 5%;
         padding-bottom: 5%;
-        font-weight: bold;
         margin-top: -1%;
         border: 1px solid #011627;
         .checkBtn {
@@ -179,6 +184,11 @@
           background-color: #00ab66;
           width: 40%;
           margin: 1%;
+          font-weight: bold;
+
+          &:hover {
+            background-color: #009559;
+          }
 
           .icon {
             padding-left: 5%;
