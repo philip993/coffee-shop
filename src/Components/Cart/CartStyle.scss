@@ -97,17 +97,19 @@
             font-size: 1.2rem;
           }
 
-          .remove {
+          .removeBtn {
             float: right;
-            color: #fdfffc;
-            margin-top: 5%;
-            width: 25px;
-            height: 25px;
-            padding-right: 5%;
+            cursor: auto;
+            .remove {
+              color: #fdfffc;
+              margin-top: 5%;
+              width: 25px;
+              height: 25px;
+              padding-right: 5%;
 
-            &:hover {
-              cursor: pointer;
-              color: #e71d36;
+              &:hover {
+                cursor: pointer;
+              }
             }
           }
         }

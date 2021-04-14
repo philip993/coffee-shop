@@ -15,7 +15,7 @@ import {
   faTrashAlt,
   faCreditCard,
 } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '@material-ui/core';
+import { Button, Tooltip, IconButton } from '@material-ui/core';
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => ({
@@ -62,11 +62,15 @@ const Cart = () => {
               <h4 className="quantityVal">$2.00</h4>
             </span>
             <span className="total">
-              <FontAwesomeIcon
-                className="remove"
-                icon={faTimesCircle}
-                onClick={handleRemoveItem}
-              />
+              <Tooltip title="Remove item from Cart">
+                <IconButton className="removeBtn">
+                  <FontAwesomeIcon
+                    className="remove"
+                    icon={faTimesCircle}
+                    onClick={handleRemoveItem}
+                  />
+                </IconButton>
+              </Tooltip>
               <h4>$4.00</h4>
             </span>
           </div>
@@ -81,11 +85,15 @@ const Cart = () => {
               <h4 className="quantityVal">$2.00</h4>
             </span>
             <span className="total">
-              <FontAwesomeIcon
-                className="remove"
-                icon={faTimesCircle}
-                onClick={handleRemoveItem}
-              />
+              <Tooltip title="Remove item from Cart">
+                <IconButton className="removeBtn">
+                  <FontAwesomeIcon
+                    className="remove"
+                    icon={faTimesCircle}
+                    onClick={handleRemoveItem}
+                  />
+                </IconButton>
+              </Tooltip>
               <h4>$4.00</h4>
             </span>
           </div>
@@ -100,11 +108,15 @@ const Cart = () => {
               <h4 className="quantityVal">$2.00</h4>
             </span>
             <span className="total">
-              <FontAwesomeIcon
-                className="remove"
-                icon={faTimesCircle}
-                onClick={handleRemoveItem}
-              />
+              <Tooltip title="Remove item from Cart">
+                <IconButton className="removeBtn">
+                  <FontAwesomeIcon
+                    className="remove"
+                    icon={faTimesCircle}
+                    onClick={handleRemoveItem}
+                  />
+                </IconButton>
+              </Tooltip>
               <h4>$2.00</h4>
             </span>
           </div>
