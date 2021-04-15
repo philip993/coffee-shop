@@ -9,6 +9,7 @@ import Contact from '../Contact/Contact';
 import Selection from '../Selection/Selection';
 import Register from '../Register/Register';
 import Main from '../Main/Main';
+import Cart from '../Cart/Cart';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/selection" component={Selection} />
         <Route exact path="/register" component={Main} />
+        <Route exact path="/cart" component={Cart} />
       </Switch>
       <Footer />
     </div>

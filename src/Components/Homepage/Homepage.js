@@ -52,7 +52,7 @@ const Homepage = () => {
         <div className="linkContainer">
           <img className="icons" src={OrderIcon} alt="order" />
           <p>View your current and previous Orders.</p>
-          <Link className="link">
+          <Link to="/cart" className="link">
             Show Orders <FontAwesomeIcon icon={faLongArrowAltRight} />
           </Link>
         </div>
